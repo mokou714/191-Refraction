@@ -1,7 +1,7 @@
 # INF191 Prisme
 
-Team: Refaction. \
-Sponsor: Van Trinh.
+Team: Refaction\
+Sponsor: Van Trinh
 
 ## Members
 
