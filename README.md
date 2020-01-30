@@ -1,6 +1,7 @@
 # INF191 Prisme
 
-This is the Github repository of team refaction. Our sponsor is Van Trinh.
+Team: Refaction. 
+Sponsor: Van Trinh.
 
 ## Members
 
@@ -11,5 +12,5 @@ Barath Vedantham
 Nevin Quoc Vo
 Zhehao Xie
 
-### Othes
+### Others
 
