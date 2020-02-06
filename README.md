@@ -13,5 +13,6 @@ Nevin Quoc Vo\
 Zhehao Xie
 
 ### Others
+Unity Version: 2019.2.11f1
 
 
