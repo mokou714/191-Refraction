@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{1F548E33-F815-EC67-7646-988A14002DA6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UI/Scripts/sceneManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SelectField.cs">
     <Files>
       <File FileName="Assets/UI/Scripts/sceneManager.cs" Line="28" Column="6" />
+      <File FileName="Assets/TextDisplayer.cs" Line="38" Column="29" />
+      <File FileName="Assets/UI/Narrative/text.txt" Line="1" Column="18" />
+      <File FileName="Assets/SelectField.cs" Line="7" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,10 +12,10 @@
           <Node name="INF191 Refraction" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="UI" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="sceneManager.cs" selected="True" />
-                </Node>
+                <Node name="Narrative" expanded="True" />
+                <Node name="Scripts" expanded="True" />
               </Node>
+              <Node name="SelectField.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -21,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb189d3b-0d7e-4aa7-bf6e-ddf23f535677" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b26564f2-0dc7-4ede-8eef-3a1d75d65129" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -64,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\UI\Scripts\sceneManager.cs" />
+    <Compile Include="Assets\UI\Scripts\SelectField.cs" />
+    <Compile Include="Assets\UI\Scripts\TextDisplayer.cs" />
+    <None Include="Assets\UI\Narrative\text.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
