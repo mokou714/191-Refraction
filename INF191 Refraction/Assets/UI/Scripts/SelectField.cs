@@ -11,22 +11,61 @@ public class SelectField : MonoBehaviour
     public List<Button> selections;
 
     bool isDisplaying = false;
+    string selected = null;
+    QuizManager quizManager = null;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (transform.parent && transform.parent.GetComponent<QuizManager>())
+            quizManager = transform.parent.GetComponent<QuizManager>();
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (!isDisplaying && Input.GetMouseButton(0))
+        //for testing
+        //if (Input.GetMouseButton(0))
+        //{
+        //    Show();
+        //}
+    }
+
+    private void OnEnable()
+    {
+        Show();
+    }
+
+    //Public
+    public void Select(string selection)
+    {
+        selected = selection;
+        EndSelect();
+    }
+
+    public void EndSelect()
+    {
+        if (quizManager)
+        {
+            quizManager.SetAnswser(selected);
+            quizManager.Next();
+        }
+    }
+
+    public void Show()
+    {
+        if (!isDisplaying)
         {
             StartCoroutine(display());
         }
     }
 
+    //Private
+
+
+    //Coroutines
     IEnumerator display()
     {
         isDisplaying = true;
