@@ -81,7 +81,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3617912176287473467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -96,8 +96,8 @@ RectTransform:
   m_Father: {fileID: 3617912176095897270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.09755229, y: 0.26786935}
-  m_AnchorMax: {x: 0.8958286, y: 0.8785313}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -415,11 +415,6 @@ PrefabInstance:
       propertyPath: prompt
       value: Choose one
       objectReference: {fileID: 0}
-    - target: {fileID: 8923715756871364854, guid: fa5e42d7431014bb5b2e15b198377b74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5e42d7431014bb5b2e15b198377b74, type: 3}
 --- !u!224 &5323835060805290439 stripped
@@ -566,11 +561,6 @@ PrefabInstance:
         type: 3}
       propertyPath: prompt
       value: Choose one
-      objectReference: {fileID: 0}
-    - target: {fileID: 8923715756871364854, guid: fa5e42d7431014bb5b2e15b198377b74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5e42d7431014bb5b2e15b198377b74, type: 3}
@@ -719,11 +709,6 @@ PrefabInstance:
       propertyPath: prompt
       value: Choose one
       objectReference: {fileID: 0}
-    - target: {fileID: 8923715756871364854, guid: fa5e42d7431014bb5b2e15b198377b74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5e42d7431014bb5b2e15b198377b74, type: 3}
 --- !u!224 &5323835060591437798 stripped
@@ -871,11 +856,6 @@ PrefabInstance:
       propertyPath: prompt
       value: Choose one
       objectReference: {fileID: 0}
-    - target: {fileID: 8923715756871364854, guid: fa5e42d7431014bb5b2e15b198377b74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5e42d7431014bb5b2e15b198377b74, type: 3}
 --- !u!224 &5323835059642504788 stripped
@@ -1022,11 +1002,6 @@ PrefabInstance:
         type: 3}
       propertyPath: prompt
       value: Choose one
-      objectReference: {fileID: 0}
-    - target: {fileID: 8923715756871364854, guid: fa5e42d7431014bb5b2e15b198377b74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5e42d7431014bb5b2e15b198377b74, type: 3}
