@@ -63,15 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Game\Scripts\ComputerUI.cs" />
+    <Compile Include="Assets\Game\Scripts\SelectEffect.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\PlayerController.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\QuizManager.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOne.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneCatcher.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneGenerator.cs" />
+    <Compile Include="Assets\SetScreen.cs" />
     <Compile Include="Assets\UI\Scripts\RadioBtnField.cs" />
     <Compile Include="Assets\UI\Scripts\sceneManager.cs" />
     <Compile Include="Assets\UI\Scripts\SelectField.cs" />
     <Compile Include="Assets\UI\Scripts\TextDisplayer.cs" />
+    <Compile Include="Assets\ZerOneStarter.cs" />
     <None Include="Assets\UI\Narrative\text.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

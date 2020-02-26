@@ -15,7 +15,7 @@ public class ZerOneGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        turnOn();
+ 
     }
 
     // Update is called once per frame

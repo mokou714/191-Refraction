@@ -9,9 +9,10 @@ public class ZerOneCatcher : MonoBehaviour
 {
 
     public Text Catching_text;
-
+    public Text Score;
     public ParticleSystem ps;
 
+    int score = 0;
 
     Bounds catcher_bounds;
     double catcher_area;
@@ -44,10 +45,14 @@ public class ZerOneCatcher : MonoBehaviour
                     || (key == 1 && zerOne_object.GetComponent<ZerOne>().zerOneType == ZerOneType.ONE))
                 {
                     catching_status = Catching_Status.GOOD;
+                    score += 80;
                     ps.Play();
                 }
                 else
+                {
+                    score -= 50;
                     catching_status = Catching_Status.MISSED;
+                }
             }
             else
             {
@@ -55,15 +60,22 @@ public class ZerOneCatcher : MonoBehaviour
                     || (key == 1 && zerOne_object.GetComponent<ZerOne>().zerOneType == ZerOneType.ONE))
                 {
                     catching_status = Catching_Status.GREAT;
+                    score += 120;
                     ps.Play();
                 }
                 else
+                {
+                    score -= 50;
                     catching_status = Catching_Status.MISSED;
+                }
                 
             }
 
             //separate data and UI updating
             ChangeCatchingText();
+
+            //update score
+            UpdateScore();
 
             //Reset
             ResetCatchingStatus();
@@ -71,7 +83,7 @@ public class ZerOneCatcher : MonoBehaviour
  
     }
 
-    public void ChangeCatchingText()
+    private void ChangeCatchingText()
     {
         switch (catching_status)
         {
@@ -89,6 +101,11 @@ public class ZerOneCatcher : MonoBehaviour
                 return;
         }
         
+    }
+
+    private void UpdateScore()
+    {
+        Score.text = score.ToString();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -113,8 +130,10 @@ public class ZerOneCatcher : MonoBehaviour
             //if(Vector2.Distance(other.gameObject.transform.position,transform.position) < Vector2.kEpsilon) { 
             if (cover_percent > 0.99)
             {
+                score -= 50;
                 catching_status = Catching_Status.MISSED;
                 ChangeCatchingText();
+                UpdateScore();
                 ResetCatchingStatus();
             }
         }
