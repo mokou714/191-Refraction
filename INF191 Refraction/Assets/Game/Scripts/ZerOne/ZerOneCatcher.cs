@@ -20,12 +20,14 @@ public class ZerOneCatcher : MonoBehaviour
     GameObject zerOne_object;
     double cover_percent;
     Catching_Status catching_status;
+    Vector3 _scale;
 
     // Start is called before the first frame update
     void Start()
     {
         catcher_bounds = GetComponent<Collider2D>().bounds;
         catcher_area = (catcher_bounds.max.x - catcher_bounds.min.x) * (catcher_bounds.max.y - catcher_bounds.min.y);
+        _scale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class ZerOneCatcher : MonoBehaviour
                     catching_status = Catching_Status.GOOD;
                     score += 80;
                     ps.Play();
+                    StartCoroutine(catchAnim());
                 }
                 else
                 {
@@ -62,6 +65,7 @@ public class ZerOneCatcher : MonoBehaviour
                     catching_status = Catching_Status.GREAT;
                     score += 120;
                     ps.Play();
+                    StartCoroutine(catchAnim());
                 }
                 else
                 {
@@ -147,6 +151,26 @@ public class ZerOneCatcher : MonoBehaviour
         cover_percent = 0;
     }
 
+    IEnumerator catchAnim()
+    {
+        while (transform.localScale.x - 1.2f * _scale.x < -0.05f)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, 1.2f * _scale, 15 * Time.deltaTime);
+            yield return new WaitForSeconds(0.001f);
+        }
+
+        StartCoroutine(catchAnim2());
+    }
+
+    IEnumerator catchAnim2()
+    {
+
+        while (transform.localScale.x - _scale.x > 0.05f)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, _scale, 15 * Time.deltaTime);
+            yield return new WaitForSeconds(0.001f);
+        }
 
 
+    }
 }

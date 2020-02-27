@@ -1181,5 +1181,15 @@ PrefabInstance:
       propertyPath: Score
       value: 
       objectReference: {fileID: 317311221}
+    - target: {fileID: 8930731725507340007, guid: 7214c70b1c1c94748acef6ddcf40cf77,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930731725507340007, guid: 7214c70b1c1c94748acef6ddcf40cf77,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7214c70b1c1c94748acef6ddcf40cf77, type: 3}
