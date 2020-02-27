@@ -5,17 +5,13 @@ using UnityEngine.UI;
 
 public class RadioBtnField : MonoBehaviour
 {
-    public string prompt;
-    public List<Toggle> selections;
-
-    [SerializeField]Text promptText;
+    [SerializeField] List<Toggle> selections;
     bool[] result;
 
     // Start is called before the first frame update
     void Start()
     {
         result = new bool[selections.Count];
-        promptText.text = prompt;
     }
 
     // Update is called once per frame

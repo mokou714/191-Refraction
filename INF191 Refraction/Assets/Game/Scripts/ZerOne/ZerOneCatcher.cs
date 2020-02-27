@@ -128,7 +128,7 @@ public class ZerOneCatcher : MonoBehaviour
             cover_percent = (dx>0&&dy>0)? dx * dy / catcher_area : 0f;
 
             //if(Vector2.Distance(other.gameObject.transform.position,transform.position) < Vector2.kEpsilon) { 
-            if (cover_percent > 0.99)
+            if (cover_percent > 0.999)
             {
                 score -= 50;
                 catching_status = Catching_Status.MISSED;

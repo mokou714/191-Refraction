@@ -50,7 +50,7 @@ public class SelectField : MonoBehaviour
         if (quizManager)
         {
             quizManager.SetAnswser(selected);
-            quizManager.Next();
+            quizManager.NextPage();
         }
     }
 

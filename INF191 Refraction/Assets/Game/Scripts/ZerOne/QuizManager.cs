@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
 {
-    public Text counter;
-    public List<SelectField> selections = new List<SelectField>();
+    public List<RadioBtnField> pages = new List<RadioBtnField>();
     [SerializeField] string[] answers;
+    [SerializeField] sceneManager SceneManager;
     int index;
     int size;
+
     // Start is called before the first frame update
     void Start()
     {
         index = 0;
-        size = selections.Count;
+        size = pages.Count;
         answers = new string[size];
         StartQuiz();
     }
@@ -27,10 +28,9 @@ public class QuizManager : MonoBehaviour
 
     public void StartQuiz()
     {
-        if (size > 0)
+        if (size > 1)
         {
-            counter.text = "#" + (index+1).ToString();
-            selections[index].gameObject.SetActive(true);
+            pages[index].gameObject.SetActive(true);
         }
     }
 
@@ -39,12 +39,21 @@ public class QuizManager : MonoBehaviour
     {
         answers[index] = answer;
     }
-    public void Next()
+    public void NextPage()
     {
-        selections[index].gameObject.SetActive(false);
+        pages[index].gameObject.SetActive(false);
         if (index + 1 >= size)
+        {
+            EndQuiz();
             return;
-        selections[++index].gameObject.SetActive(true);
-        counter.text = "#" + (index + 1).ToString();
+        }
+        pages[++index].gameObject.SetActive(true);
     }
+
+    public void EndQuiz()
+    {
+        SceneManager.LoadMainGameStage();
+    }
+
+
 }

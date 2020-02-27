@@ -46,4 +46,10 @@ public class sceneManager : MonoBehaviour
         Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
         SceneManager.LoadScene(3);
     }
+
+    public void LoadQuiz()
+    {
+        Screen.SetResolution(PortraitWidth, PortraitHeight, false);
+        SceneManager.LoadScene(4);
+    }
 }

@@ -4134,7 +4134,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5064981201222451033}
-  - component: {fileID: 5064981201222451032}
   m_Layer: 5
   m_Name: NormalBtnSelect
   m_TagString: Untagged
@@ -4169,26 +4168,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5064981201222451032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064981201222451038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0323e4f03a46443bc9a801768c0fb6c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counter: {fileID: 5064981201292743018}
-  selections:
-  - {fileID: 4439711002433830410}
-  - {fileID: 4439711002647679019}
-  - {fileID: 4439711001353239533}
-  - {fileID: 4439711002339071392}
-  - {fileID: 4439711001753391032}
-  answers: []
 --- !u!1 &5064981201292743016
 GameObject:
   m_ObjectHideFlags: 0
