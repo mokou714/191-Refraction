@@ -155,7 +155,7 @@ public class ZerOneCatcher : MonoBehaviour
     {
         while (transform.localScale.x - 1.2f * _scale.x < -0.05f)
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, 1.2f * _scale, 15 * Time.deltaTime);
+            transform.localScale = Vector3.Lerp(transform.localScale, 1.2f * _scale, 18 * Time.deltaTime);
             yield return new WaitForSeconds(0.001f);
         }
 
@@ -167,7 +167,7 @@ public class ZerOneCatcher : MonoBehaviour
 
         while (transform.localScale.x - _scale.x > 0.05f)
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, _scale, 15 * Time.deltaTime);
+            transform.localScale = Vector3.Lerp(transform.localScale, _scale, 18 * Time.deltaTime);
             yield return new WaitForSeconds(0.001f);
         }
 
