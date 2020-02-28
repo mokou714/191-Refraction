@@ -235,6 +235,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10578}
     - Class: 114
+      Script: {instanceID: 10598}
+    - Class: 114
       Script: {instanceID: 10658}
     - Class: 114
       Script: {instanceID: 11020}
@@ -332,12 +334,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
-  - hash:
-      serializedVersion: 2
-      Hash: 5d9bf499574e53338d747c1d0b092e59
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SetScreen
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -819,5 +815,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainGame.unity
   - Assets/Scenes/MiniGame1.unity
   - Assets/Scenes/Quiz.unity
-  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demo/INF191
+  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demoV1.1/INF191
     Refraction.exe

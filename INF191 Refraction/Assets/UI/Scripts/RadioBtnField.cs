@@ -23,7 +23,18 @@ public class RadioBtnField : MonoBehaviour
 
     public void Select(int index)
     {
-        result[index] = true;
+        result[index] = selections[index].isOn;
+
+        //hard coded for selection cancel out each other
+        if(index%2 == 0)
+        {
+            selections[index + 1].isOn = !selections[index].isOn;
+        }
+        else
+        {
+            selections[index - 1].isOn = !selections[index].isOn;
+        }
+
 
         //debug
         //for(int i = 0; i < result.Length; ++i)
