@@ -28,11 +28,13 @@ public class RadioBtnField : MonoBehaviour
         //hard coded for selection cancel out each other
         if(index%2 == 0)
         {
-            selections[index + 1].isOn = !selections[index].isOn;
+            if(selections[index].isOn)
+                selections[index + 1].isOn = false;
         }
         else
         {
-            selections[index - 1].isOn = !selections[index].isOn;
+            if (selections[index].isOn)
+                selections[index - 1].isOn = false;
         }
 
 

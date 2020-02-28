@@ -66,11 +66,11 @@
     <Compile Include="Assets\Game\Scripts\ComputerUI.cs" />
     <Compile Include="Assets\Game\Scripts\SelectEffect.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\PlayerController.cs" />
-    <Compile Include="Assets\Game\Scripts\ZerOne\QuizManager.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOne.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneCatcher.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneGenerator.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneStarter.cs" />
+    <Compile Include="Assets\UI\Scripts\QuizManager.cs" />
     <Compile Include="Assets\UI\Scripts\RadioBtnField.cs" />
     <Compile Include="Assets\UI\Scripts\sceneManager.cs" />
     <Compile Include="Assets\UI\Scripts\SelectField.cs" />
