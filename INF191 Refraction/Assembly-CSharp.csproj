@@ -70,11 +70,17 @@
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneCatcher.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneGenerator.cs" />
     <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneStarter.cs" />
+    <Compile Include="Assets\UI\BackgrounClick.cs" />
+    <Compile Include="Assets\UI\DeskInterfaceElement.cs" />
+    <Compile Include="Assets\UI\HeaderManager.cs" />
+    <Compile Include="Assets\UI\MainDeskInterface.cs" />
     <Compile Include="Assets\UI\Scripts\QuizManager.cs" />
     <Compile Include="Assets\UI\Scripts\RadioBtnField.cs" />
     <Compile Include="Assets\UI\Scripts\sceneManager.cs" />
     <Compile Include="Assets\UI\Scripts\SelectField.cs" />
     <Compile Include="Assets\UI\Scripts\TextDisplayer.cs" />
+    <Compile Include="Assets\UI\SkillCardsPage.cs" />
+    <Compile Include="Assets\UI\SkillCardsUI.cs" />
     <None Include="Assets\UI\Narrative\text.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

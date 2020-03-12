@@ -1,10 +1,17 @@
 ﻿<Properties StartupConfiguration="{1F548E33-F815-EC67-7646-988A14002DA6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UI/Scripts/RadioBtnField.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BackgrounClick.cs">
     <Files>
       <File FileName="Assets/UI/Scripts/QuizManager.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Assets/Game/Scripts/ZerOne/ZerOneCatcher.cs" Line="162" Column="25" />
+      <File FileName="Assets/Game/Scripts/ZerOne/ZerOneCatcher.cs" />
       <File FileName="Assets/UI/Scripts/RadioBtnField.cs" Line="37" Column="35" />
-      <File FileName="Assets/UI/Scripts/sceneManager.cs" Line="18" Column="68" />
+      <File FileName="Assets/UI/Scripts/sceneManager.cs" />
+      <File FileName="Assets/HeaderManager.cs" Line="13" Column="18" />
+      <File FileName="Assets/Game/Scripts/ComputerUI.cs" Line="49" Column="59" />
+      <File FileName="Assets/SkillCardsPage.cs" Line="7" Column="46" />
+      <File FileName="Assets/SkillCardsUI.cs" Line="34" Column="55" />
+      <File FileName="Assets/DeskInterfaceElement.cs" Line="19" Column="12" />
+      <File FileName="Assets/MainDeskInterface.cs" Line="25" Column="32" />
+      <File FileName="Assets/BackgrounClick.cs" Line="7" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,10 +25,9 @@
               </Node>
               <Node name="UI" expanded="True">
                 <Node name="Narrative" expanded="True" />
-                <Node name="Scripts" expanded="True">
-                  <Node name="RadioBtnField.cs" selected="True" />
-                </Node>
+                <Node name="Scripts" expanded="True" />
               </Node>
+              <Node name="BackgrounClick.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -30,7 +36,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2f14a794-6397-4d19-9410-9e8bf8834dc7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6aaff3e1-7b10-4fc8-bed9-268f6661cba7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
