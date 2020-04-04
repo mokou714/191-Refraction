@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="BackgroundCover.cs" t="Include" />
+        <e p="Game" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ComputerUI.cs" t="Include" />
+            <e p="SelectEffect.cs" t="Include" />
+            <e p="ZerOne" t="Include">
+              <e p="PlayerController.cs" t="Include" />
+              <e p="ZerOne.cs" t="Include" />
+              <e p="ZerOneCatcher.cs" t="Include" />
+              <e p="ZerOneGenerator.cs" t="Include" />
+              <e p="ZerOneStarter.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SkillCardFrontBack.cs" t="Include" />
+        <e p="SubCanvas.cs" t="Include" />
+        <e p="UI" t="Include">
+          <e p="BackgrounClick.cs" t="Include" />
+          <e p="DeskInterfaceElement.cs" t="Include" />
+          <e p="HeaderManager.cs" t="Include" />
+          <e p="MainDeskInterface.cs" t="Include" />
+          <e p="Narrative" t="Include">
+            <e p="text.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="QuizManager.cs" t="Include" />
+            <e p="RadioBtnField.cs" t="Include" />
+            <e p="sceneManager.cs" t="Include" />
+            <e p="SelectField.cs" t="Include" />
+            <e p="TextDisplayer.cs" t="Include" />
+          </e>
+          <e p="SkillCard.cs" t="Include" />
+          <e p="SkillCardElement.cs" t="Include" />
+          <e p="SkillCardsPage.cs" t="Include" />
+          <e p="SkillCardUI.cs" t="Include" />
+        </e>
+      </e>
+      <e p="INF191 Refraction.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_INF191 Refraction.-310665983.00" t="ExcludeRecursive" />
+  </component>
+</project>

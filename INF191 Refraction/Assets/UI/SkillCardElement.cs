@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class SkillCardsUI : DeskInterfaceElement, IPointerClickHandler
+public class SkillCardElement : DeskInterfaceElement, IPointerClickHandler
 {
-    [SerializeField] GameObject UI;
-    [SerializeField] GameObject Text;
-    [SerializeField] HeaderManager headerManager;
-    [SerializeField] MainDeskInterface mainDeskInterface;
+    [SerializeField] private GameObject UI;
+    [SerializeField] private GameObject Text;
+    [SerializeField] private HeaderManager headerManager;
+    [SerializeField] private MainDeskInterface mainDeskInterface;
 
     public void OnPointerClick(PointerEventData eventData)
     {
