@@ -5,17 +5,8 @@ using UnityEngine;
 public class SkillCardsPage : MonoBehaviour
 {
     [SerializeField] GameObject[] skillCards;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool isInspecting;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Display()
     {

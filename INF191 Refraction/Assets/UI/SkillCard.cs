@@ -9,30 +9,28 @@ public class SkillCard : MonoBehaviour
     [SerializeField] private Vector3 displaySize;
     [SerializeField] private float rotationSensitivity;
     [SerializeField] private float transitionSpeed;
-    [SerializeField] private Image cardImage;
     [SerializeField] private GameObject front;
     [SerializeField] private GameObject back;
     
     //status
-    private bool _isDisplaying;
     private bool _inTransition;
-    [SerializeField]private bool _isDragging;
-    
+    private bool _isBeingInspected;
+    private bool _isDragging;
+
     //helper data
     private Vector3 _screenCenter;
     private Vector3 _defaultPosition;
     private Vector3 _defaultScale;
     private Quaternion _defaultRotation;
-    private Color _defaultCardImageColor;
     
     private Vector3 _targetPosition;
     private Vector3 _targetScale;
-    [SerializeField]private Transform _parent;
+    private Transform _parent;
     private Vector3 _lastMousePosition;
 
     //other component
     [SerializeField] private SkillCardUI _skillCardUI;
-    
+    [SerializeField] private SkillCardsPage _skillCardsPage;
     
     // Start is called before the first frame update
     void Start()
@@ -42,7 +40,6 @@ public class SkillCard : MonoBehaviour
         _defaultPosition = transform.position;
         _defaultScale = _targetScale = transform.localScale;
         _defaultRotation = transform.rotation;
-        _defaultCardImageColor = cardImage.color;
         _parent = transform.parent;
         _lastMousePosition = Input.mousePosition;
     }
@@ -65,7 +62,7 @@ public class SkillCard : MonoBehaviour
             transform.position = _targetPosition;
             transform.localScale = _targetScale;
             _inTransition = false;
-            _isDisplaying = !_isDisplaying;
+            _isBeingInspected = true; //card is being inspected when transition has finished
         }
         
 
@@ -73,7 +70,8 @@ public class SkillCard : MonoBehaviour
 
     private void DragAndRotate()
     {
-        if (!_isDragging) return;
+        if (!_isBeingInspected || !_isDragging) return;
+        
         var mousePositionDiff = _lastMousePosition - Input.mousePosition;
         var rotationVelocity = new Vector3(mousePositionDiff.y, mousePositionDiff.x);
         _lastMousePosition = Input.mousePosition;
@@ -86,29 +84,30 @@ public class SkillCard : MonoBehaviour
 
     public void GetPointerClick()
     {
-        if (_isDisplaying) return;
+        //no other cards being inspected
+        if (_skillCardsPage.isInspecting) return;
         Display();
     }
 
     public void GetPointerDown()
     {
-        if (!_isDisplaying) return;
+        if (!_isBeingInspected) return;
         _isDragging = true;
         _lastMousePosition = Input.mousePosition;
     }
 
     public void GetPointerUp()
     {
-        if (!_isDisplaying) return;
+        if (!_isBeingInspected) return;
         _isDragging = false;
     }
 
     private void Display()
     {
         _inTransition = true;
+        _skillCardsPage.isInspecting = true;
         _targetPosition = _screenCenter;
         _targetScale = displaySize;
-        cardImage.color = new Color(_defaultCardImageColor.r,_defaultCardImageColor.g,_defaultCardImageColor.b,1f);
         _skillCardUI.OnSkillCardClick(this);
     }
 
@@ -118,11 +117,11 @@ public class SkillCard : MonoBehaviour
         _targetPosition = _defaultPosition;
         _targetScale = _defaultScale;
         transform.rotation = _defaultRotation;
-        cardImage.color = _defaultCardImageColor;
         front.SetActive(true);
         back.SetActive(false);
-        //transform.parent = _parent;
         ((RectTransform) transform).parent = _parent;
+        _isBeingInspected = false;
+        _skillCardsPage.isInspecting = false;
 
     }
 
