@@ -1,6 +1,6 @@
 # INF191 Prisme
 
-Team: Refaction\
+Team: Refraction\
 Sponsor: Van Trinh
 
 ## Members
