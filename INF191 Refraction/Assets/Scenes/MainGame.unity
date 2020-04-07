@@ -188,7 +188,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Project Manager(Back)
+  m_Text: Project Managers are responsible for planning and overseeing projects to
+    ensure they are completed in a timely fashion and within budget. Project managers
+    plan and designate project resources, prepare budgets, monitor progress, and keep
+    stakeholders informed the entire way.
 --- !u!222 &8578816
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -511,7 +514,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Data Structures(Back)
+  m_Text: A Data Structure is a data organization, management, and storage format
+    that enables efficient access and modification.
 --- !u!222 &94271144
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -693,7 +697,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UI Design(Back)
+  m_Text: The goal of User Interface Design is to make the user's interaction as simple
+    and efficient as possible with the focus on maximizing usability and the user
+    experience.
 --- !u!222 &127927097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1018,7 +1024,7 @@ GameObject:
   - component: {fileID: 174492536}
   - component: {fileID: 174492537}
   m_Layer: 5
-  m_Name: Skill Card4
+  m_Name: C# Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1060,7 +1066,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 1476017885}
   back: {fileID: 502258433}
   _skillCardUI: {fileID: 1702140693}
@@ -1427,7 +1432,7 @@ GameObject:
   - component: {fileID: 244550914}
   - component: {fileID: 244550915}
   m_Layer: 5
-  m_Name: Skill Card1
+  m_Name: UI Design
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1469,7 +1474,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 23759111}
   back: {fileID: 725891792}
   _skillCardUI: {fileID: 1702140693}
@@ -1799,7 +1803,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Javascript Programming
+  m_Text: JavaScript Programming
 --- !u!222 &306582458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1876,7 +1880,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Python Programming(Back)
+  m_Text: Python is an interpreted, high-level, general-purpose programming language.
+    Its language constructs and object-oriented approach aim to help programmers write
+    clear, logical code for small and large-scale projects.
 --- !u!222 &329529115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1896,7 +1902,7 @@ GameObject:
   - component: {fileID: 334603444}
   - component: {fileID: 334603445}
   m_Layer: 5
-  m_Name: Skill Card1
+  m_Name: Project Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1938,7 +1944,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 657609834}
   back: {fileID: 1231439896}
   _skillCardUI: {fileID: 1702140693}
@@ -2116,7 +2121,7 @@ GameObject:
   - component: {fileID: 382158915}
   - component: {fileID: 382158916}
   m_Layer: 5
-  m_Name: Skill Card2
+  m_Name: Project Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2158,7 +2163,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 1883607168}
   back: {fileID: 128166647}
   _skillCardUI: {fileID: 1702140693}
@@ -2251,7 +2255,7 @@ GameObject:
   - component: {fileID: 393791821}
   - component: {fileID: 393791822}
   m_Layer: 5
-  m_Name: Skill Card6
+  m_Name: Databases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2293,7 +2297,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 103136286}
   back: {fileID: 935663212}
   _skillCardUI: {fileID: 1702140693}
@@ -3302,7 +3305,7 @@ GameObject:
   - component: {fileID: 529725962}
   - component: {fileID: 529725963}
   m_Layer: 5
-  m_Name: Skill Card7
+  m_Name: Data Structures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3344,7 +3347,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 1228012248}
   back: {fileID: 653425905}
   _skillCardUI: {fileID: 1702140693}
@@ -3588,7 +3590,7 @@ GameObject:
   - component: {fileID: 616636481}
   - component: {fileID: 616636482}
   m_Layer: 5
-  m_Name: Skill Card1
+  m_Name: Java Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3630,7 +3632,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 1464958933}
   back: {fileID: 1598978936}
   _skillCardUI: {fileID: 1702140693}
@@ -4055,7 +4056,7 @@ GameObject:
   - component: {fileID: 729733975}
   - component: {fileID: 729733976}
   m_Layer: 5
-  m_Name: Skill Card2
+  m_Name: C++ Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4097,7 +4098,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 1352948344}
   back: {fileID: 153955426}
   _skillCardUI: {fileID: 1702140693}
@@ -4990,7 +4990,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Databases(Back)
+  m_Text: 'A Database is an organized collection of data, generally stored and accessed
+    electronically from a computer system. '
 --- !u!222 &939710015
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5144,7 +5145,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: JAVA Programming(Back)
+  m_Text: Java is a general-purpose programming language that is class-based, object-oriented,
+    and designed to have as few implementation dependencies as possible. Intended
+    to be (WORA) Write Once, Run Anywhere in order to run on any machine after being
+    created.
 --- !u!222 &1036074505
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5773,7 +5777,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: C++ Programming(Back)
+  m_Text: C++ is a middle-level language. It is a superset of C to allow low-level
+    and high-level functionality.  C++ runs on a variety of platforms, such as Windows,
+    Mac OS, and the various versions of UNIX.
 --- !u!222 &1279191551
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6521,7 +6527,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Javascript Programming(Back)
+  m_Text: JavaScript is a Programming language that is high-level, often just-in-time
+    compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based
+    object-orientation, and first-class functions.
 --- !u!222 &1366029557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6966,7 +6974,7 @@ GameObject:
   - component: {fileID: 1461220231}
   - component: {fileID: 1461220232}
   m_Layer: 5
-  m_Name: Skill Card5
+  m_Name: JavaScript Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7008,7 +7016,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 1763066865}
   back: {fileID: 1304226779}
   _skillCardUI: {fileID: 1702140693}
@@ -7228,7 +7235,7 @@ GameObject:
   - component: {fileID: 1613275091}
   - component: {fileID: 1613275092}
   m_Layer: 5
-  m_Name: Skill Card3
+  m_Name: Python Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7270,7 +7277,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 365628331}
   back: {fileID: 1542765519}
   _skillCardUI: {fileID: 1702140693}
@@ -7558,7 +7564,7 @@ GameObject:
   - component: {fileID: 1702670388}
   - component: {fileID: 1702670389}
   m_Layer: 5
-  m_Name: Skill Card2
+  m_Name: UX Design
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7600,7 +7606,6 @@ MonoBehaviour:
   displaySize: {x: 2, y: 2, z: 2}
   rotationSensitivity: 0.5
   transitionSpeed: 0.1
-  cardImage: {fileID: 1164661639}
   front: {fileID: 1381536359}
   back: {fileID: 511454471}
   _skillCardUI: {fileID: 1702140693}
@@ -8170,7 +8175,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Project Director(Back)
+  m_Text: A Project Director is responsible for overseeing workers in various departments
+    who are assigned certain tasks to complete for a given project. The job description
+    of a project director will involve creating schedules and following up with workers
+    to ensure that each phase of a project proceeds as planned.
 --- !u!222 &1857673831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8247,7 +8255,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UX Design(Back)
+  m_Text: User eXperience Design (UXD, UED, or XD) is the process of manipulating
+    user behavior through usability, usefulness, and desirability provided in the
+    interaction with a product.
 --- !u!222 &1858632296
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9534,7 +9544,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: C# Programming(Back)
+  m_Text: C# is a modern, general-purpose, object-oriented programming language designed
+    for Common Language Infrastructure (CLI).
 --- !u!222 &2142960825
 CanvasRenderer:
   m_ObjectHideFlags: 0
