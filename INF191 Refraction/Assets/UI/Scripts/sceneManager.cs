@@ -1,12 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour
 {
-    static int PortraitWidth;
-    static int PortraitHeight;
-    static int LandscapeWidth;
-    static int LandscapeHeight;
+    public int PortraitWidth;
+    public int PortraitHeight;
+    public int LandscapeWidth;
+    public int LandscapeHeight;
+
+    public void SetPortrait()
+    {
+        Screen.SetResolution(PortraitWidth, PortraitHeight, false);
+    }
+
+    public void SetLandscape()
+    {
+        Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
+    }
 
     public void LoadLoginStage()
     {

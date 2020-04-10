@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,12 @@ public class LoginManager : MonoBehaviour
     [SerializeField] private InputField _passwordField;
     [SerializeField] private GameObject _loginFailedUI;
     [SerializeField] private sceneManager _sceneManager;
-    
+
+    private void Awake()
+    {
+        _sceneManager.SetPortrait();
+    }
+
     public void OnSubmit()
     {
         try
@@ -21,15 +27,18 @@ public class LoginManager : MonoBehaviour
                 _loginFailedUI.SetActive(true);
                 return;
             }
-            
+
             var path = "./Users/" + _accountIdField.text + "/data.json";
-            var json = File.OpenText(path).ReadToEnd();
-            var userData = JsonConvert.DeserializeObject<UserData>(json);
+            var json = File.ReadAllText(path);
             
+            LoginSucceeded();
+            //*******problem here*********
+            var userData = JsonConvert.DeserializeObject<UserData>(json);
+            //****************************
+
             var sha256 = SHA256.Create();
             var pwHashValue = sha256.ComputeHash(System.Text.Encoding.ASCII.GetBytes(_passwordField.text));
-
-
+            
             if (pwHashValue.Length == userData.password.Length)
             {
                 for (var i = 0; i < pwHashValue.Length;++i)
@@ -39,13 +48,12 @@ public class LoginManager : MonoBehaviour
                         LoginFailed("Invalid Password");
                     }
                 }
+                LoginSucceeded();
             }
             else
             {
                 LoginFailed("Invalid Password");
             }
-            
-            LoginSucceeded();
 
         }
         catch (IOException)
@@ -62,6 +70,7 @@ public class LoginManager : MonoBehaviour
 
     private void LoginSucceeded()
     {
+        Debug.Log("Login Success");
         _sceneManager.LoadCharaterCreationStage();
     }
     
