@@ -1,16 +1,30 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackgroundClick
+    - BackgroundCover
     - ComputerUI
+    - HeaderManager
+    - LoginManager
+    - MainDeskInterface
     - PlayerController
     - QuizManager
     - RadioBtnField
     - SelectEffect
+    - SignUpManager
+    - SkillCard
+    - SkillCardElement
+    - SkillCardFrontBack
+    - SkillCardUI
+    - SkillCardsPage
+    - SubCanvas
     - ZerOne
     - ZerOneCatcher
     - ZerOneGenerator
     - ZerOneStarter
     - sceneManager
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -48,35 +62,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
-    - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9676}
     - Class: 114
       Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9868}
+      Script: {instanceID: 9830}
     - Class: 114
-      Script: {instanceID: 10156}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 10162}
     - Class: 114
-      Script: {instanceID: 10406}
+      Script: {instanceID: 10256}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10418}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10760}
+      Script: {instanceID: 10612}
     - Class: 114
-      Script: {instanceID: 11020}
+      Script: {instanceID: 10776}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 11398}
+    - Class: 114
+      Script: {instanceID: 11412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -109,25 +123,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 9676}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9814}
     - Class: 114
-      Script: {instanceID: 9868}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10256}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10760}
+      Script: {instanceID: 10612}
     - Class: 114
-      Script: {instanceID: 11020}
+      Script: {instanceID: 10776}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11138}
+    - Class: 114
+      Script: {instanceID: 11296}
+    - Class: 114
+      Script: {instanceID: 11398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -160,27 +178,47 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 9676}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9868}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 9926}
+      Script: {instanceID: 9928}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 10056}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10190}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 11020}
+      Script: {instanceID: 10256}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 10462}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 10612}
+    - Class: 114
+      Script: {instanceID: 10642}
+    - Class: 114
+      Script: {instanceID: 10888}
+    - Class: 114
+      Script: {instanceID: 10932}
+    - Class: 114
+      Script: {instanceID: 11040}
+    - Class: 114
+      Script: {instanceID: 11056}
+    - Class: 114
+      Script: {instanceID: 11254}
+    - Class: 114
+      Script: {instanceID: 11290}
+    - Class: 114
+      Script: {instanceID: 11296}
+    - Class: 114
+      Script: {instanceID: 11376}
+    - Class: 114
+      Script: {instanceID: 11398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,33 +257,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 9676}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9868}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 10020}
+      Script: {instanceID: 10022}
     - Class: 114
-      Script: {instanceID: 10164}
+      Script: {instanceID: 10170}
     - Class: 114
-      Script: {instanceID: 10220}
+      Script: {instanceID: 10232}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 10256}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10612}
     - Class: 114
-      Script: {instanceID: 10658}
+      Script: {instanceID: 10674}
     - Class: 114
-      Script: {instanceID: 11020}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11190}
+      Script: {instanceID: 11216}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,29 +322,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 9676}
     - Class: 114
       Script: {instanceID: 9758}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9868}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 9918}
+      Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 10256}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10612}
     - Class: 114
-      Script: {instanceID: 11020}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 11412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -348,7 +386,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 3f961d71c553aaefa4762a0410fa140e
+      Hash: f8f5da06f6ace306da0f4765c33c0725
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuizManager
@@ -370,6 +408,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: fe273dc747dad07b6ad792890fa68d5f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoginManager
   - hash:
       serializedVersion: 2
       Hash: 72712369a7c681ad84fc255a5ec0b333
@@ -480,6 +524,12 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
+      Hash: 4ce15e99c635d2567873d27549d1f16f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HeaderManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -514,6 +564,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 9914acb9435c39be19b20d62f510747e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkillCardElement
+  - hash:
+      serializedVersion: 2
+      Hash: 675cd17e7fc956d8ec5d96a77b4fc3b9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgroundClick
   - hash:
       serializedVersion: 2
       Hash: 1076e494fbd88460069bbd8416995791
@@ -570,6 +632,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: f33a0a79d1a324d3a8b0a0b07c5ee306
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkillCardsPage
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -598,6 +666,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 58937144dcb521dff1865f7d2e8ce7a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkillCardFrontBack
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -660,6 +734,18 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: ff13cc01fc72efe1d0b5ef86a1c45c30
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkillCard
+  - hash:
+      serializedVersion: 2
+      Hash: 0aba6e32d1141e7e86a262a84f9adb4e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgroundCover
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -678,10 +764,22 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: d35b1f060ed52b0a0767614f49a7969d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkillCardUI
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: a58a883679112cf37ae15474edb33d44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SignUpManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -700,6 +798,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ZerOneCatcher
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainDeskInterface
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SubCanvas
   - hash:
       serializedVersion: 2
       Hash: 0c956e10345b8530ef7cc0fcc6300d19
@@ -756,7 +866,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 37a01d2cda34633000d6969593525c58
+      Hash: 630ed4c329530693165ed28ebdd9415d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ComputerUI
@@ -815,5 +925,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainGame.unity
   - Assets/Scenes/MiniGame1.unity
   - Assets/Scenes/Quiz.unity
-  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demoV1.1/INF191
+  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demoV3.0_win/INF191
     Refraction.exe

@@ -26,7 +26,7 @@
         <e p="SkillCardFrontBack.cs" t="Include" />
         <e p="SubCanvas.cs" t="Include" />
         <e p="UI" t="Include">
-          <e p="BackgrounClick.cs" t="Include" />
+          <e p="BackgroundClick.cs" t="Include" />
           <e p="DeskInterfaceElement.cs" t="Include" />
           <e p="HeaderManager.cs" t="Include" />
           <e p="MainDeskInterface.cs" t="Include" />

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using System.Security.Cryptography;
 using Newtonsoft.Json;
 
-
 public class LoginManager : MonoBehaviour
 {
     [SerializeField] private InputField _accountIdField;
@@ -24,17 +23,13 @@ public class LoginManager : MonoBehaviour
         {
             if (!Directory.Exists("./Users/" + _accountIdField.text))
             {
-                _loginFailedUI.SetActive(true);
+                LoginFailed("Invalid Username");
                 return;
             }
 
             var path = "./Users/" + _accountIdField.text + "/data.json";
             var json = File.ReadAllText(path);
-            
-            LoginSucceeded();
-            //*******problem here*********
             var userData = JsonConvert.DeserializeObject<UserData>(json);
-            //****************************
 
             var sha256 = SHA256.Create();
             var pwHashValue = sha256.ComputeHash(System.Text.Encoding.ASCII.GetBytes(_passwordField.text));
@@ -46,6 +41,7 @@ public class LoginManager : MonoBehaviour
                     if (pwHashValue[i] != userData.password[i])
                     {
                         LoginFailed("Invalid Password");
+                        return;
                     }
                 }
                 LoginSucceeded();
