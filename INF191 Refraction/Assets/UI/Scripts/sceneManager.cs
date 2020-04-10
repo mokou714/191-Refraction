@@ -1,28 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour
 {
-    [SerializeField]int PortraitWidth;
-    [SerializeField]int PortraitHeight;
-    [SerializeField]int LandscapeWidth;
-    [SerializeField]int LandscapeHeight;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //DontDestroyOnLoad(gameObject);
-        Screen.SetResolution(PortraitWidth, PortraitHeight, false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    static int PortraitWidth;
+    static int PortraitHeight;
+    static int LandscapeWidth;
+    static int LandscapeHeight;
 
     public void LoadLoginStage()
     {

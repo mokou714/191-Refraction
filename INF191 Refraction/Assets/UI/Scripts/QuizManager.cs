@@ -7,7 +7,7 @@ public class QuizManager : MonoBehaviour
 {
     public List<RadioBtnField> pages = new List<RadioBtnField>();
     [SerializeField] string[] answers;
-    [SerializeField] sceneManager SceneManager;
+    [SerializeField] sceneManager _sceneManager;
     int index;
     int size;
 
@@ -35,7 +35,7 @@ public class QuizManager : MonoBehaviour
     }
 
     //called by select field
-    public void SetAnswser(string answer)
+    public void SetAnswer(string answer)
     {
         answers[index] = answer;
     }
@@ -50,10 +50,8 @@ public class QuizManager : MonoBehaviour
         pages[++index].gameObject.SetActive(true);
     }
 
-    public void EndQuiz()
+    private void EndQuiz()
     {
-        SceneManager.LoadMainGameStage();
+        _sceneManager.LoadMainGameStage();
     }
-
-
 }

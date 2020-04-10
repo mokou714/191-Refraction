@@ -22,17 +22,6 @@ public class SelectField : MonoBehaviour
             quizManager = transform.parent.GetComponent<QuizManager>();
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        //for testing
-        //if (Input.GetMouseButton(0))
-        //{
-        //    Show();
-        //}
-    }
-
     private void OnEnable()
     {
         Show();
@@ -49,7 +38,7 @@ public class SelectField : MonoBehaviour
     {
         if (quizManager)
         {
-            quizManager.SetAnswser(selected);
+            quizManager.SetAnswer(selected);
             quizManager.NextPage();
         }
     }
@@ -61,8 +50,6 @@ public class SelectField : MonoBehaviour
             StartCoroutine(display());
         }
     }
-
-    //Private
 
 
     //Coroutines

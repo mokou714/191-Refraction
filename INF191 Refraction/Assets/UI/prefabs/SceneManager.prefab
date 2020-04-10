@@ -43,7 +43,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3597f06e8280f456681ef3d6ad1077dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PortraitWidth: 600
-  PortraitHeight: 900
-  LandscapeWidth: 1024
-  LandscapeHeight: 768

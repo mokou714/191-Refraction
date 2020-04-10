@@ -64,6 +64,9 @@
      <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneCatcher.cs" />
      <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneGenerator.cs" />
      <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneStarter.cs" />
+     <Compile Include="Assets\Save\LoginManager.cs" />
+     <Compile Include="Assets\Save\SignUpManager.cs" />
+     <Compile Include="Assets\Save\UserData.cs" />
      <Compile Include="Assets\SkillCardFrontBack.cs" />
      <Compile Include="Assets\SubCanvas.cs" />
      <Compile Include="Assets\UI\BackgrounClick.cs" />
@@ -283,6 +286,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.11f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.11f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
