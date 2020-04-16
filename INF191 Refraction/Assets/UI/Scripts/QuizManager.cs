@@ -6,48 +6,54 @@ using UnityEngine.UI;
 public class QuizManager : MonoBehaviour
 {
     public List<RadioBtnField> pages = new List<RadioBtnField>();
+    public List<PageBubbleSign> bubbleSigns = new List<PageBubbleSign>();
     [SerializeField] string[] answers;
     [SerializeField] sceneManager _sceneManager;
-    int index;
-    int size;
+    private int _index;
+    private int _size;
 
     // Start is called before the first frame update
     void Start()
     {
-        index = 0;
-        size = pages.Count;
-        answers = new string[size];
+        _index = 0;
+        _size = pages.Count;
+        answers = new string[_size];
         StartQuiz();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void StartQuiz()
     {
-        if (size > 1)
+        if (_size > 1)
         {
-            pages[index].gameObject.SetActive(true);
+            pages[_index].gameObject.SetActive(true);
         }
     }
 
     //called by select field
     public void SetAnswer(string answer)
     {
-        answers[index] = answer;
+        answers[_index] = answer;
     }
     public void NextPage()
     {
-        pages[index].gameObject.SetActive(false);
-        if (index + 1 >= size)
+        pages[_index].gameObject.SetActive(false);
+        bubbleSigns[_index].Deselect();
+        if (_index + 1 >= _size)
         {
             EndQuiz();
             return;
         }
-        pages[++index].gameObject.SetActive(true);
+        pages[++_index].gameObject.SetActive(true);
+        bubbleSigns[_index].Select();
+    }
+
+    public void ToPage(int index)
+    {
+        pages[_index].gameObject.SetActive(false);
+        bubbleSigns[_index].Deselect();
+        
+        _index = index;
+        pages[_index].gameObject.SetActive(true);
     }
 
     private void EndQuiz()

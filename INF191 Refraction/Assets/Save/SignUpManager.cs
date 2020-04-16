@@ -9,6 +9,7 @@ public class SignUpManager : MonoBehaviour
     [SerializeField] private InputField _accountIdField;
     [SerializeField] private InputField _passwordField;
     [SerializeField] private GameObject _signUpUI;
+    [SerializeField] private Text errorText;
 
     public void OnSubmit()
     {
@@ -16,7 +17,8 @@ public class SignUpManager : MonoBehaviour
         
         if (Directory.Exists(path))
         {
-            Debug.Log("Username already exists");
+            errorText.enabled = true;
+            errorText.text = "User already exists";
             return;
         }
         Directory.CreateDirectory(path);

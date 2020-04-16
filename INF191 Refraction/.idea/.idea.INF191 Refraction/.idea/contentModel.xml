@@ -18,6 +18,9 @@
             </e>
           </e>
         </e>
+        <e p="inputFieldManager.cs" t="Include" />
+        <e p="PageBubbleSign.cs" t="Include" />
+        <e p="QuizWelcomeText.cs" t="Include" />
         <e p="Save" t="Include">
           <e p="LoginManager.cs" t="Include" />
           <e p="SignUpManager.cs" t="Include" />

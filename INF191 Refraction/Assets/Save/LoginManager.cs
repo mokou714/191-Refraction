@@ -44,6 +44,8 @@ public class LoginManager : MonoBehaviour
                         return;
                     }
                 }
+                Data.userData = new UserData();
+                Data.userData.CopyUserData(userData);
                 LoginSucceeded();
             }
             else
