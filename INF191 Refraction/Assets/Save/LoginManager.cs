@@ -69,7 +69,12 @@ public class LoginManager : MonoBehaviour
     private void LoginSucceeded()
     {
         Debug.Log("Login Success");
-        _sceneManager.LoadCharaterCreationStage();
+        if(!Data.userData.accountSetupComplete)
+            _sceneManager.LoadAccountSetupStage();
+        else if(!Data.userData.quizComplete)
+            _sceneManager.LoadQuiz();
+        else
+            _sceneManager.LoadMainGameStage();
     }
     
 }

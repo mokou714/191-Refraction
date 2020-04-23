@@ -21,6 +21,8 @@
       <Path>Users</Path>
       <Path>demoV4.0</Path>
       <Path>demoV4.0.app</Path>
+      <Path>demoV5.0.app</Path>
+      <Path>demo_winV4.0</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

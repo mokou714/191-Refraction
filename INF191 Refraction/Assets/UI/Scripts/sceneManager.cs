@@ -25,27 +25,29 @@ public class sceneManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LoadCharaterCreationStage()
+    public void LoadAccountSetupStage()
     {
         Screen.SetResolution(PortraitWidth, PortraitHeight, false);
         SceneManager.LoadScene(1);
     }
 
-    public void LoadMainGameStage()
+    public void LoadQuiz()
     {
-        Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
+        Screen.SetResolution(PortraitWidth, PortraitHeight, false);
         SceneManager.LoadScene(2);
     }
-
-    public void LoadZerOne()
+    
+    public void LoadMainGameStage()
     {
         Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
         SceneManager.LoadScene(3);
     }
 
-    public void LoadQuiz()
+    public void LoadZerOne()
     {
-        Screen.SetResolution(PortraitWidth, PortraitHeight, false);
+        Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
         SceneManager.LoadScene(4);
     }
+
+    
 }
