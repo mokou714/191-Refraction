@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 88241774}
   - component: {fileID: 88241773}
   m_Layer: 5
-  m_Name: surfTheWeb
+  m_Name: ConnectFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +409,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 88241774}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8183048233533894245, guid: 7632cc5ecd1984438a8170035460fee4,
+          type: 3}
+        m_MethodName: LoadConnect4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &88241774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7532,7 +7544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Surf the Web
+  m_Text: Connect Four
 --- !u!222 &1614967722
 CanvasRenderer:
   m_ObjectHideFlags: 0

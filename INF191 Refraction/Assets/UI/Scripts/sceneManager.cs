@@ -48,6 +48,12 @@ public class sceneManager : MonoBehaviour
         Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
         SceneManager.LoadScene(4);
     }
+    
+    public void LoadConnect4()
+    {
+        Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
+        SceneManager.LoadScene(5);
+    }
 
     
 }

@@ -56,7 +56,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Game\Scripts\ComputerUI.cs" />
+     <Compile Include="Assets\Game\Scripts\Connect4\BallSign.cs" />
+     <Compile Include="Assets\Game\Scripts\Connect4\BoardManager.cs" />
+     <Compile Include="Assets\Game\Scripts\Connect4\Connect4.cs" />
+     <Compile Include="Assets\Game\Scripts\Connect4\Player.cs" />
+     <Compile Include="Assets\Game\Scripts\Connect4\Tile.cs" />
      <Compile Include="Assets\Game\Scripts\ZerOne\PlayerController.cs" />
      <Compile Include="Assets\Game\Scripts\ZerOne\ZerOne.cs" />
      <Compile Include="Assets\Game\Scripts\ZerOne\ZerOneCatcher.cs" />
@@ -79,6 +83,7 @@
      <Compile Include="Assets\UI\InputFieldManager.cs" />
      <Compile Include="Assets\UI\MainDeskInterface.cs" />
      <Compile Include="Assets\UI\PageBubbleSign.cs" />
+     <Compile Include="Assets\UI\Scripts\ComputerUI.cs" />
      <Compile Include="Assets\UI\Scripts\QuizManager.cs" />
      <Compile Include="Assets\UI\Scripts\RadioBtnField.cs" />
      <Compile Include="Assets\UI\Scripts\sceneManager.cs" />
