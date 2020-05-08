@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
@@ -10,15 +8,18 @@ public class Tile : MonoBehaviour
     [SerializeField] private BoardManager gameBoard;
     public int col;
 
+    private bool _buttonDown;
+    
     private void Start()
     {
         p1.enabled = p2.enabled = false;
     }
-
+    
     public void OnMouseDown()
     {
-        Debug.Log("Try a move");
-        gameBoard.Move(col);
+        
+        _buttonDown = true;
+        
     }
 
     public void OnMouseEnter()
@@ -26,9 +27,21 @@ public class Tile : MonoBehaviour
         gameBoard.SetSign(col,true);
     }
 
+    public void OnMouseUp()
+    {
+        if (_buttonDown)
+        {
+            Debug.Log("Try a move");
+            gameBoard.Move(col);
+        }
+
+        _buttonDown = false;
+    }
+
     public void OnMouseExit()
     {
         gameBoard.SetSign(col,false);
+        _buttonDown = false;
     }
 
     public void SetMove(bool isP1)

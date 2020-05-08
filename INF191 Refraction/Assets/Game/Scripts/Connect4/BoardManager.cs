@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class BoardManager : MonoBehaviour
 {
@@ -11,9 +12,15 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private Tile[] tiles;
     [SerializeField] private BallSign[] ballSigns;
     [SerializeField] private Text winText;
-    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private GameObject endWindow;
+    [SerializeField] private GameObject questionWindow;
+    [SerializeField] private Text questionText;
     
     private Connect4 _gameInstance;
+    private QuestionManager _questionManager;
+
+    private bool _isDisplayingQuestion;
+    
 
     private void Start()
     {
@@ -22,9 +29,11 @@ public class BoardManager : MonoBehaviour
 
     public void Move(int col)
     {
+        if (_isDisplayingQuestion) return;
+        
         var currentPlayer = _gameInstance.GetCurrentPlayer();
 
-        if (_gameInstance.IsGameOver())
+        if (_gameInstance.IsGameOver() || _gameInstance.BoardFull())
         {
             InvalidMove("Game is over.");
         }
@@ -32,9 +41,15 @@ public class BoardManager : MonoBehaviour
         {
             var row = _gameInstance.GetLastMovedRow();
             tiles[row*colSize + col].SetMove(currentPlayer == Player.P1);
-            SetSign(col,true);
-            if (_gameInstance.IsGameOver())
+            if (_gameInstance.IsGameOver() || _gameInstance.BoardFull())
                 OnGameEnded();
+            else
+            {
+                //clear all ball signs after making a move
+                for(var c =0; c<ballSigns.Length;++c)
+                    SetSign(c, false);
+                GenerateQuestion(currentPlayer);
+            }
         }
         else
         {
@@ -42,11 +57,34 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    private void GenerateQuestion(Player player)
+    {
+        questionText.text = _questionManager.GetOneQuestion(Random.Range(0,3), player == Player.P1);
+        questionWindow.SetActive(true);
+        _isDisplayingQuestion = true;
+        Debug.Log(questionText.text);
+    }
+
     private void OnGameEnded()
     {
-        var currentPlayer = _gameInstance.GetCurrentPlayer();
-        dialogueBox.SetActive(true);
-        winText.text = (currentPlayer == Player.P1 ? "Player 1" : "Player 2") + " won!";
+        //game has winner
+        if (_gameInstance.IsGameOver())
+        {
+            var currentPlayer = _gameInstance.GetCurrentPlayer();
+            endWindow.SetActive(true);
+            winText.text = (currentPlayer == Player.P1 ? "Player 1" : "Player 2") + " won!";
+        }
+        //draw
+        else
+        {
+            endWindow.SetActive(true);
+            winText.text = "A nice draw!";
+        }
+    }
+    
+    public void OnQuestionEnded()
+    {
+        _isDisplayingQuestion = false;
     }
     
     
@@ -57,6 +95,7 @@ public class BoardManager : MonoBehaviour
 
     public void SetSign(int col, bool visible)
     {
+        if (_isDisplayingQuestion) return;
         var currentPlayer = _gameInstance.GetCurrentPlayer();
         ballSigns[col].SetSign(currentPlayer == Player.P1, visible);
     }
@@ -65,7 +104,8 @@ public class BoardManager : MonoBehaviour
     {
         _gameInstance = new Connect4();
         _gameInstance.Init(rowSize,colSize);
-        
+        _questionManager = new QuestionManager();
+
         var startRowPosition = rowSize / 2f * tilePositionOffset - tilePositionOffset/2f + transform.position.y;
         var startColPosition = colSize / 2f * tilePositionOffset - tilePositionOffset/2f + transform.position.x;
 
@@ -99,6 +139,7 @@ public class BoardManager : MonoBehaviour
     {
         _gameInstance = new Connect4();
         _gameInstance.Init(rowSize,colSize);
+        _questionManager.Reset();
         foreach(var tile in tiles)
         {
             tile.Reset();
@@ -107,6 +148,6 @@ public class BoardManager : MonoBehaviour
         {
            ballSign.Reset();
         }
-        dialogueBox.SetActive(false);
+        endWindow.SetActive(false);
     }
 }

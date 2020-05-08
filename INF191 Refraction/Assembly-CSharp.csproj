@@ -60,6 +60,8 @@
      <Compile Include="Assets\Game\Scripts\Connect4\BoardManager.cs" />
      <Compile Include="Assets\Game\Scripts\Connect4\Connect4.cs" />
      <Compile Include="Assets\Game\Scripts\Connect4\Player.cs" />
+     <Compile Include="Assets\Game\Scripts\Connect4\QuestionManager.cs" />
+     <Compile Include="Assets\Game\Scripts\Connect4\Questions.cs" />
      <Compile Include="Assets\Game\Scripts\Connect4\Tile.cs" />
      <Compile Include="Assets\Game\Scripts\ZerOne\PlayerController.cs" />
      <Compile Include="Assets\Game\Scripts\ZerOne\ZerOne.cs" />

@@ -24,6 +24,7 @@ public class Connect4
     
     //helper data
     private int _lastMovedRow;
+    private int moveCount;
 
     public void Init(int rowSize, int colSize)
     {
@@ -54,7 +55,7 @@ public class Connect4
 
     public bool Move(int col)
     {
-        if (_gameOver) return false;
+        if (_gameOver || BoardFull()) return false;
         
         for (var i = _rowSize-1; i >= 0; --i)
         {
@@ -70,7 +71,8 @@ public class Connect4
                 {
                     _currentPlayer = _currentPlayer == Player.P1 ? Player.P2 : Player.P1;
                 }
-                
+
+                moveCount++;
                 return true;
             }
         }
@@ -116,6 +118,11 @@ public class Connect4
             +
             RecurCheck(row, col, 1, 1, -1)
             >=5;
+    }
+
+    public bool BoardFull()
+    {
+        return moveCount == _colSize * _rowSize;
     }
 
     private int RecurCheck(int row, int col, int count, int rowOffset, int colOffset)

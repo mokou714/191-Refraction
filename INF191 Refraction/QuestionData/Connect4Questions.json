@@ -1,0 +1,92 @@
+{
+    "employer":
+    {
+        "tier1" : [
+            "Introduce yourself.",
+            "List 3 adjectives to describe yourself.",
+            "What are your strengths?",
+            "What is one of your biggest weaknesses?",
+            "What have you done to improve your weaknesses?",
+            "What motivates you on a day to day basis?",
+            "What hobbies do you have?",
+            "Where do you see yourself in 5 years?",
+            "What do you ultimately want to become?",
+            "What is your greatest accomplishment?",
+            "What is important to you outside of your career?",
+            "Who is your role model?",
+            "What personal asset can you bring to the company?",
+            "What do you do to organize your time?",
+            "What does efficiency mean to you?",
+            "Why did you choose to major in your degree program?",
+            "Why did you choose to study at the school you chose?",
+            "Do you prefer to work independently or as a team?",
+        ],
+
+        "tier2" : [
+            "How important is communication in a workplace setting?",
+            "Is there any specific project you would like to avoid, why?",
+            "Name one skill you gained from your last job that you can bring to this one.",
+            "If a coworker is having issues, how do you help them?",
+            "What do you want to accomplish in the first 90 days of this job?",
+            "Would you rather complete fewer tasks diligently or complete more tasks with less emphasis on quality, and why?",
+            "Which is more important, creativity or efficiency?",
+            "If there were something in your past you were able to go back and do differently, what would that be?",
+            "Describe work you’ve accomplished that best compares to what needs to be done.",
+            "What is a development area that you’re had to overcome to improve in your career?",
+            "Can you provide specific constructive feedback on how I can be a better leader model?",
+            "You’re a project lead, and a contributor on your team makes an uncommunicated change to the project. Upon being presented to a stakeholder they are upset with this change. How do you proceed with the situation?",
+        ],
+
+        "tier3" : [
+            "What are your previous related experiences?",
+            "What were your responsibilities in your last job?",
+            "If you own the company, what would you do differently?",
+            "Describe a time where you have overcome an obstacle and how it affected the person you are now.",
+            "Describe a time where you have achieved a goal.",
+            "What would you do if one employee has made a mistake that affects the whole group?",
+            "What challenges do you see impacting the industry?",
+            "What is an example of a skill you learned that greatly aided in your employment or a specific task you had to perform?",
+        ],
+    },
+    
+    "employee":
+    {
+        "tier1": [
+            "In adjectives, what characteristics are you looking for?",
+            "What is the ideal hire for the company?",
+            "What role am I expected to fulfill for this position?",
+            "What would a daily schedule look like for my position?",
+            "What perks are a part of the workspace? (Coffee, snacks, etc)",
+            "What’s the next step in the interview/hiring process?",
+            "When can I expect to hear back again from the organization?",
+            "How many meetings am I expected to attend on a typical day?",
+            "What can you tell me about the job apart from what was in the description?",
+            "What is your job and what does your day look like?",
+            "If I were hired for the position, what would be the ideal starting date?",
+            "Is there any traveling required for this position?",
+            "Does the company sponsor higher education programs, e.g. MBA programs?",
+            "Does this position allow work-from-home or working remotely?",
+            "On what basis are bonuses and promotions awarded?",
+        ],
+        "tier2": [
+            "How do you help employees improve?",
+            "What are the mentorship opportunities available at this organization?",
+            "What does the general structure of the work environment look like?",
+            "What are the teams like?",
+            "How many people would I need to report to?",
+            "How many levels of hierarchy is there?",
+            "Why do you choose this career?",
+            "What is your ideal workplace culture?",
+            "What is the current workplace culture?",
+            "What are the company’s current goals?",
+            "What kind of hours are expected for me to perform the role at maximum capacity?",
+            "What does it look like during the busiest and toughest times for this role?",
+            "How do you choose between multiple highly-qualified candidates for one position?",
+        ],
+        "tier3": [
+            "Briefly explain your personal career story."
+        ]
+    }
+        
+    
+}

@@ -17,11 +17,12 @@
       <Path>.vs</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>QuestionData</Path>
       <Path>Temp</Path>
       <Path>Users</Path>
       <Path>demoV4.0</Path>
-      <Path>demoV5.0.app</Path>
-      <Path>demo_winV5.0</Path>
+      <Path>demoV5.1.app</Path>
+      <Path>demo_winV5.1</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

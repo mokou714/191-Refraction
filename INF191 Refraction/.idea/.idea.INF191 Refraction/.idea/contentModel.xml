@@ -11,6 +11,8 @@
               <e p="BoardManager.cs" t="Include" />
               <e p="Connect4.cs" t="Include" />
               <e p="Player.cs" t="Include" />
+              <e p="QuestionManager.cs" t="Include" />
+              <e p="Questions.cs" t="Include" />
               <e p="Tile.cs" t="Include" />
             </e>
             <e p="ZerOne" t="Include">
