@@ -1044,4 +1044,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainGame.unity
   - Assets/Game/Scenes/MiniGame1.unity
   - Assets/Game/Scenes/Connect4.unity
-  playerPath: /Users/jeimeilreymercado/Downloads/JeiTest/INF191 Refraction.exe
+  playerPath: /Users/jeimeilreymercado/Downloads/GIt/191-Refraction/INF191 Refraction/demo_winV5.3/INF191
+    Refraction.exe
