@@ -53,9 +53,9 @@ public class Connect4
         _gameOver = false;
     }
 
-    public bool Move(int col)
+    public int Move(int col)
     {
-        if (_gameOver || BoardFull()) return false;
+        if (_gameOver || BoardFull()) return -1;
         
         for (var i = _rowSize-1; i >= 0; --i)
         {
@@ -63,7 +63,8 @@ public class Connect4
             {
                 _board[i][col].state = _currentPlayer;
                 _lastMovedRow = i;
-                if (CheckGameState(i, col))
+                var result = CheckGameState(i, col);
+                if(result >= 5)
                 {
                     _gameOver = true;
                 }
@@ -73,10 +74,10 @@ public class Connect4
                 }
 
                 moveCount++;
-                return true;
+                return result;
             }
         }
-        return false;
+        return -1;
     }
 
     public bool IsGameOver()
@@ -94,30 +95,29 @@ public class Connect4
         return _lastMovedRow;
     }
 
-    private bool CheckGameState(int row, int col)
+    private int CheckGameState(int row, int col)
     {
         //8-direction recursion
         //use 5 because the starting position is calculated twice
         return
-            RecurCheck(row, col, 1, -1, 0) 
-            + 
-            RecurCheck(row, col, 1, 1, 0)
-            >=5
-            || 
-            RecurCheck(row, col, 1, 0, -1) 
-            + 
-            RecurCheck(row, col, 1, 0, 1)
-            >=5
-            ||
-            RecurCheck(row, col, 1, -1, -1)
-            + 
-            RecurCheck(row, col, 1, 1, 1)
-            >=5
-            || 
-            RecurCheck(row, col, 1, -1, 1)
-            +
-            RecurCheck(row, col, 1, 1, -1)
-            >=5;
+            Mathf.Max(
+                RecurCheck(row, col, 1, -1, 0)
+                +
+                RecurCheck(row, col, 1, 1, 0)
+                ,
+                RecurCheck(row, col, 1, 0, -1)
+                +
+                RecurCheck(row, col, 1, 0, 1)
+                ,
+                RecurCheck(row, col, 1, -1, -1)
+                +
+                RecurCheck(row, col, 1, 1, 1)
+                ,
+                RecurCheck(row, col, 1, -1, 1)
+                +
+                RecurCheck(row, col, 1, 1, -1)
+                
+            );
     }
 
     public bool BoardFull()

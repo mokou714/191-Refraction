@@ -84,8 +84,16 @@
             "How do you choose between multiple highly-qualified candidates for one position?",
         ],
         "tier3": [
-            "Briefly explain your personal career story."
-        ]
+            "Briefly explain your personal career story.",
+            "Explain a time you had to face a difficult employee or client and how did you deal with the situation?",
+            "What makes this company stand out from competitors?",
+            "What is the significance of this role to your company?",
+            "What can the company improve on?",
+            "How do employees in the company handle stress?",
+            "What model of reinforcement do you use to correct and instruct?",
+            "Do you expect the responsibilities for this role to change in the near future?",
+            "What kind of leadership/management style do you promote in the company?",
+        ],
     }
         
     

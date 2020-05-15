@@ -37,29 +37,38 @@ public class BoardManager : MonoBehaviour
         {
             InvalidMove("Game is over.");
         }
-        else if (_gameInstance.Move(col))
-        {
-            var row = _gameInstance.GetLastMovedRow();
-            tiles[row*colSize + col].SetMove(currentPlayer == Player.P1);
-            if (_gameInstance.IsGameOver() || _gameInstance.BoardFull())
-                OnGameEnded();
-            else
-            {
-                //clear all ball signs after making a move
-                for(var c =0; c<ballSigns.Length;++c)
-                    SetSign(c, false);
-                GenerateQuestion(currentPlayer);
-            }
-        }
         else
         {
-            InvalidMove("Invalid move.");
+            var result = _gameInstance.Move(col);
+            //use 5 because the starting position is calculated twice
+            //result == 2: single disc
+            //result == 3: two discs in a row
+            //result == 4: three disc in a row
+            if (result != -1)
+            {
+                var row = _gameInstance.GetLastMovedRow();
+                tiles[row * colSize + col].SetMove(currentPlayer == Player.P1);
+                if (_gameInstance.IsGameOver() || _gameInstance.BoardFull())
+                    OnGameEnded();
+                else
+                {
+                    //clear all ball signs after making a move
+                    for (var c = 0; c < ballSigns.Length; ++c)
+                        SetSign(c, false);
+                    GenerateQuestion(currentPlayer,result-2);
+                }
+            }
+            else
+            {
+                InvalidMove("Invalid move.");
+            }
         }
+        
     }
 
-    private void GenerateQuestion(Player player)
+    private void GenerateQuestion(Player player, int tier)
     {
-        questionText.text = _questionManager.GetOneQuestion(Random.Range(0,3), player == Player.P1);
+        questionText.text = _questionManager.GetOneQuestion(tier, player == Player.P1);
         questionWindow.SetActive(true);
         _isDisplayingQuestion = true;
         Debug.Log(questionText.text);

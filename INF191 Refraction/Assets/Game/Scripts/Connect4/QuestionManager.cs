@@ -46,15 +46,15 @@ public class QuestionManager
                 Debug.Log("Run out of questions");
                 return null;
             case 0:
-                question = GetQuestionFromTier(tierSet, ref isPlayer1? ref _p1tier1Index: ref _p2tier1Index);
+                question = GetQuestionFromTier1(tierSet, ref isPlayer1? ref _p1tier1Index: ref _p2tier1Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier1);
                 return "Tier1("+playerType+"): " + question;
             case 1:
-                question = GetQuestionFromTier(tierSet, ref isPlayer1? ref _p1tier2Index: ref _p2tier2Index);
+                question = GetQuestionFromTier2(tierSet, ref isPlayer1? ref _p1tier2Index: ref _p2tier2Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier2);
                 return "Tier2("+playerType+"): " + question;
             case 2:
-                question = GetQuestionFromTier(tierSet, ref isPlayer1? ref _p1tier3Index: ref _p2tier3Index);
+                question = GetQuestionFromTier3(tierSet, ref isPlayer1? ref _p1tier3Index: ref _p2tier3Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier3);
                 return "Tier3("+playerType+"): " + question;
             default:
@@ -62,12 +62,30 @@ public class QuestionManager
         }
     }
 
-    private string GetQuestionFromTier(TierSet tierSet, ref int tierIndex)
+    private string GetQuestionFromTier1(TierSet tierSet, ref int tierIndex)
     {
         
         var questionIndex = Random.Range( tierIndex, tierSet.tier1.Length);
         var question = string.Copy(tierSet.tier1[questionIndex]);
         tierSet.tier1[questionIndex] = string.Copy(tierSet.tier1[tierIndex]);
+        tierIndex++;
+        return question;
+    }
+    private string GetQuestionFromTier2(TierSet tierSet, ref int tierIndex)
+    {
+        
+        var questionIndex = Random.Range( tierIndex, tierSet.tier2.Length);
+        var question = string.Copy(tierSet.tier2[questionIndex]);
+        tierSet.tier2[questionIndex] = string.Copy(tierSet.tier2[tierIndex]);
+        tierIndex++;
+        return question;
+    }
+    private string GetQuestionFromTier3(TierSet tierSet, ref int tierIndex)
+    {
+        
+        var questionIndex = Random.Range( tierIndex, tierSet.tier3.Length);
+        var question = string.Copy(tierSet.tier3[questionIndex]);
+        tierSet.tier3[questionIndex] = string.Copy(tierSet.tier3[tierIndex]);
         tierIndex++;
         return question;
     }

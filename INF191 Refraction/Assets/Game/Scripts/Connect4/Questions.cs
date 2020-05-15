@@ -12,5 +12,4 @@ public class Questions
 {
     public TierSet employer;
     public TierSet employee;
-
 }

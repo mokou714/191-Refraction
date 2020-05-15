@@ -32,6 +32,8 @@ ScriptsOnlyBuild:
     - ZerOneGenerator
     - ZerOneStarter
     - sceneManager
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -1044,4 +1046,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainGame.unity
   - Assets/Game/Scenes/MiniGame1.unity
   - Assets/Game/Scenes/Connect4.unity
-  playerPath: /Users/jeimeilreymercado/Downloads/GIt/191-Refraction/INF191 Refraction/demoV5.3.app
+  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demoV5.4.app
