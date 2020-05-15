@@ -81,7 +81,7 @@ public class BoardManager : MonoBehaviour
         {
             var currentPlayer = _gameInstance.GetCurrentPlayer();
             endWindow.SetActive(true);
-            winText.text = (currentPlayer == Player.P1 ? "Player 1" : "Player 2") + " won!";
+            winText.text = (currentPlayer == Player.P1 ? "Employee" : "Employer") + " won!";
         }
         //draw
         else

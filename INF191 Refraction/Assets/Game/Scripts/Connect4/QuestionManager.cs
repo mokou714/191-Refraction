@@ -48,15 +48,15 @@ public class QuestionManager
             case 0:
                 question = GetQuestionFromTier1(tierSet, ref isPlayer1? ref _p1tier1Index: ref _p2tier1Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier1);
-                return "Tier1("+playerType+"): " + question;
+                return "" + playerType + " Asks! (Tier 1) : \n\n" + question;
             case 1:
                 question = GetQuestionFromTier2(tierSet, ref isPlayer1? ref _p1tier2Index: ref _p2tier2Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier2);
-                return "Tier2("+playerType+"): " + question;
+                return "" + playerType + " Asks! (Tier 2) : \n\n" + question;
             case 2:
                 question = GetQuestionFromTier3(tierSet, ref isPlayer1? ref _p1tier3Index: ref _p2tier3Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier3);
-                return "Tier3("+playerType+"): " + question;
+                return "" + playerType + " Asks! (Tier 3) : \n\n" + question;
             default:
                 return null;
         }
