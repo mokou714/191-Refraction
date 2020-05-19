@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Game/Scenes/Connect4.unity
+- path: Assets/Scenes/Interview Portal.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
