@@ -55,5 +55,11 @@ public class sceneManager : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
+    public void LoadInterviewPortal()
+    {
+        Screen.SetResolution(LandscapeWidth, LandscapeHeight, false);
+        SceneManager.LoadScene(6);
+    }
+
     
 }

@@ -37,7 +37,7 @@ public class QuestionManager
         string question;
         var availability = isPlayer1 ? _p1AvailableTiers : _p2AvailableTiers;
         var availableTierIndex = CheckAvailableTier(availability, tier);
-        var playerType = isPlayer1 ? "Employee" : "Employer";
+        var playerType = isPlayer1 ? "Candidate" : "Company";
         var tierSet = isPlayer1? _questions.employee:_questions.employer;
 
         switch (availableTierIndex)
@@ -48,15 +48,15 @@ public class QuestionManager
             case 0:
                 question = GetQuestionFromTier1(tierSet, ref isPlayer1? ref _p1tier1Index: ref _p2tier1Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier1);
-                return "" + playerType + " Asks! (Tier 1) : \n\n" + question;
+                return "" + playerType + " Asks! (Tier 1): \n\n" + question;
             case 1:
                 question = GetQuestionFromTier2(tierSet, ref isPlayer1? ref _p1tier2Index: ref _p2tier2Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier2);
-                return "" + playerType + " Asks! (Tier 2) : \n\n" + question;
+                return "" + playerType + " Asks! (Tier 2): \n\n" + question;
             case 2:
                 question = GetQuestionFromTier3(tierSet, ref isPlayer1? ref _p1tier3Index: ref _p2tier3Index);
                 UpdateAvailableTier(availability, availableTierIndex, tierSet.tier3);
-                return "" + playerType + " Asks! (Tier 3) : \n\n" + question;
+                return "" + playerType + " Asks! (Tier 3): \n\n" + question;
             default:
                 return null;
         }

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Connect4.unity
     guid: 77371c074b6a748b3885ca7185a338c5
+  - enabled: 1
+    path: Assets/Scenes/Interview Portal.unity
+    guid: f355254582ef41944846c1e3fba3da5b
   m_configObjects: {}

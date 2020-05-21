@@ -15,12 +15,12 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private GameObject endWindow;
     [SerializeField] private GameObject questionWindow;
     [SerializeField] private Text questionText;
-    
+
     private Connect4 _gameInstance;
     private QuestionManager _questionManager;
 
     private bool _isDisplayingQuestion;
-    
+
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class BoardManager : MonoBehaviour
     public void Move(int col)
     {
         if (_isDisplayingQuestion) return;
-        
+
         var currentPlayer = _gameInstance.GetCurrentPlayer();
 
         if (_gameInstance.IsGameOver() || _gameInstance.BoardFull())
@@ -55,7 +55,7 @@ public class BoardManager : MonoBehaviour
                     //clear all ball signs after making a move
                     for (var c = 0; c < ballSigns.Length; ++c)
                         SetSign(c, false);
-                    GenerateQuestion(currentPlayer,result-2);
+                    GenerateQuestion(currentPlayer, result - 2);
                 }
             }
             else
@@ -63,7 +63,7 @@ public class BoardManager : MonoBehaviour
                 InvalidMove("Invalid move.");
             }
         }
-        
+
     }
 
     private void GenerateQuestion(Player player, int tier)
@@ -81,7 +81,7 @@ public class BoardManager : MonoBehaviour
         {
             var currentPlayer = _gameInstance.GetCurrentPlayer();
             endWindow.SetActive(true);
-            winText.text = (currentPlayer == Player.P1 ? "Employee" : "Employer") + " won!";
+            winText.text = (currentPlayer == Player.P1 ? "CANDIDATE" : "COMPANY") + " WON!";
         }
         //draw
         else
@@ -90,13 +90,13 @@ public class BoardManager : MonoBehaviour
             winText.text = "A nice draw!";
         }
     }
-    
+
     public void OnQuestionEnded()
     {
         _isDisplayingQuestion = false;
     }
-    
-    
+
+
     private void InvalidMove(string msg)
     {
         Debug.Log(msg);
@@ -108,15 +108,15 @@ public class BoardManager : MonoBehaviour
         var currentPlayer = _gameInstance.GetCurrentPlayer();
         ballSigns[col].SetSign(currentPlayer == Player.P1, visible);
     }
-    
+
     private void Init()
     {
         _gameInstance = new Connect4();
-        _gameInstance.Init(rowSize,colSize);
+        _gameInstance.Init(rowSize, colSize);
         _questionManager = new QuestionManager();
 
-        var startRowPosition = rowSize / 2f * tilePositionOffset - tilePositionOffset/2f + transform.position.y;
-        var startColPosition = colSize / 2f * tilePositionOffset - tilePositionOffset/2f + transform.position.x;
+        var startRowPosition = rowSize / 2f * tilePositionOffset - tilePositionOffset / 2f + transform.position.y;
+        var startColPosition = colSize / 2f * tilePositionOffset - tilePositionOffset / 2f + transform.position.x;
 
         for (var i = 0; i < colSize; ++i)
         {
@@ -132,7 +132,7 @@ public class BoardManager : MonoBehaviour
         {
             var row = i / colSize;
             var col = i % colSize;
-            
+
             tiles[i].gameObject.SetActive(true);
             tiles[i].transform.position = new Vector3(
                 -startColPosition + col * tilePositionOffset,
@@ -147,15 +147,15 @@ public class BoardManager : MonoBehaviour
     public void Restart()
     {
         _gameInstance = new Connect4();
-        _gameInstance.Init(rowSize,colSize);
+        _gameInstance.Init(rowSize, colSize);
         _questionManager.Reset();
-        foreach(var tile in tiles)
+        foreach (var tile in tiles)
         {
             tile.Reset();
         }
         foreach (var ballSign in ballSigns)
         {
-           ballSign.Reset();
+            ballSign.Reset();
         }
         endWindow.SetActive(false);
     }
