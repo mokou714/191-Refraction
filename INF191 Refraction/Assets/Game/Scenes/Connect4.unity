@@ -15020,7 +15020,7 @@ MonoBehaviour:
   - {fileID: 6385362}
   - {fileID: 1842630580}
   - {fileID: 922969912}
-  winText: {fileID: 0}
+  winText: {fileID: 422223803}
   endWindow: {fileID: 1484523744}
   questionWindow: {fileID: 708890116}
   questionText: {fileID: 978946611}
