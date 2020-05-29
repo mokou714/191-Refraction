@@ -4045,7 +4045,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8183048233533894245, guid: 7632cc5ecd1984438a8170035460fee4,
           type: 3}
-        m_MethodName: LoadMainGameStage
+        m_MethodName: LoadLoginStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

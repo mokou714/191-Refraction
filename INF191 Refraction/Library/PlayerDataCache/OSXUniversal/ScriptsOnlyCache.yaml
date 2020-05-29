@@ -34,8 +34,6 @@ ScriptsOnlyBuild:
     - ZerOneGenerator
     - ZerOneStarter
     - sceneManager
-    Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
@@ -104,11 +102,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11230}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -169,11 +167,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -232,9 +230,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -301,19 +299,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11304}
+      Script: {instanceID: 11206}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11306}
     - Class: 114
-      Script: {instanceID: 11394}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 18046}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 52316}
+      Script: {instanceID: 25072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -382,13 +380,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11186}
     - Class: 114
-      Script: {instanceID: 11242}
+      Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11464}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -453,15 +451,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11304}
+      Script: {instanceID: 11306}
     - Class: 114
-      Script: {instanceID: 11340}
+      Script: {instanceID: 11342}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -520,11 +518,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11348}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11464}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1016,6 +1014,12 @@ ScriptsOnlyBuild:
     className: SignUpManager
   - hash:
       serializedVersion: 2
+      Hash: 1b69fd1ee86bac7b1819b76a7afc22ba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InterviewPortalDataLoader
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1158,12 +1162,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 1b69fd1ee86bac7b1819b76a7afc22ba
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InterviewPortalDataLoader
   platform: 2
   scenePathNames:
   - Assets/Scenes/Login.unity
@@ -1173,4 +1171,4 @@ ScriptsOnlyBuild:
   - Assets/Game/Scenes/MiniGame1.unity
   - Assets/Game/Scenes/Connect4.unity
   - Assets/Scenes/Interview Portal.unity
-  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demoV6.0.app
+  playerPath: /Users/jeimeilreymercado/Downloads/GIt/191-Refraction/INF191 Refraction/JeiTest.app
