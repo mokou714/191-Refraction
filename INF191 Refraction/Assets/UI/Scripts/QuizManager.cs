@@ -58,6 +58,7 @@ public class QuizManager : MonoBehaviour
 
     private void EndQuiz()
     {
+        Data.userData.quizComplete = true;
         _sceneManager.LoadMainGameStage();
     }
 }

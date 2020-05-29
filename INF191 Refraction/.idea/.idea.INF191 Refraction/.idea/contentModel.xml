@@ -28,6 +28,7 @@
           <e p="AccountSetupDataSaver.cs" t="Include" />
           <e p="DataLoader.cs" t="Include" />
           <e p="DataSaver.cs" t="Include" />
+          <e p="InterviewPortalDataLoader.cs" t="Include" />
           <e p="LoginManager.cs" t="Include" />
           <e p="MainGameDataLoader.cs" t="Include" />
           <e p="QuizDataLoader.cs" t="Include" />

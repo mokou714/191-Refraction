@@ -10,7 +10,7 @@ public class SignUpManager : MonoBehaviour
     [SerializeField] private InputField _passwordField;
     [SerializeField] private GameObject _signUpUI;
     [SerializeField] private Text errorText;
-
+    [SerializeField] private Toggle isEmployer;
     public void OnSubmit()
     {
         var path = "./Users/" + _accountIdField.text;
@@ -31,6 +31,7 @@ public class SignUpManager : MonoBehaviour
         var userData = new UserData();
         userData.accountId = _accountIdField.text;
         userData.password = pwHashValue;
+        userData.isEmployer = isEmployer.isOn;
 
         var json = JsonConvert.SerializeObject(userData);
         Debug.Log(json);

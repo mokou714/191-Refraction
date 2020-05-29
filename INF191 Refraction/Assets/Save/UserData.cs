@@ -8,6 +8,7 @@ public class UserData
         public int profileImageIndex;
         public bool quizComplete;
         public bool accountSetupComplete;
+        public bool isEmployer;
         
         
 
@@ -20,6 +21,8 @@ public class UserData
                 profileImageIndex = userData.profileImageIndex;
                 quizComplete = userData.quizComplete;
                 accountSetupComplete = userData.accountSetupComplete;
+                isEmployer = userData.isEmployer;
+
         }
 
 }

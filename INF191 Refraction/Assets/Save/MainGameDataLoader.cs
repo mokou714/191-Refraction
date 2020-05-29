@@ -8,12 +8,8 @@ public class MainGameDataLoader : DataLoader
     [SerializeField] private Text userId;
     
     //resources
-    // [System.Serializable]
-    // public struct MyResources
-    // {
-        public Sprite[] profileImages;
-    // }
-    
+    public Sprite[] profileImages;
+
     protected override void LoadData()
     {
         if (Data.userData == null) return;

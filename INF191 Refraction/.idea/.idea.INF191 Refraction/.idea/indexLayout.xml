@@ -15,15 +15,13 @@
     <explicitExcludes>
       <Path>.idea</Path>
       <Path>.vs</Path>
-      <Path>JeiTest.app</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>NevTest.app</Path>
       <Path>QuestionData</Path>
+      <Path>Temp</Path>
       <Path>Users</Path>
       <Path>demoV4.0</Path>
-      <Path>demoV5.3.app</Path>
-      <Path>demoV5.4.app</Path>
+      <Path>demoV6.0.app</Path>
       <Path>demo_winV5.3</Path>
       <Path>demo_winV5.4</Path>
       <Path>obj</Path>

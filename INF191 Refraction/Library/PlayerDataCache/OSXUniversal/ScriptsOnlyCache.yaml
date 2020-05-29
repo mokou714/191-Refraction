@@ -8,8 +8,10 @@ ScriptsOnlyBuild:
     - BoardManager
     - Clickable
     - ComputerUI
+    - DataSaver
     - HeaderManager
     - InputFieldManager
+    - InterviewPortalDataLoader
     - LoginManager
     - MainDeskInterface
     - MainGameDataLoader
@@ -32,7 +34,10 @@ ScriptsOnlyBuild:
     - ZerOneGenerator
     - ZerOneStarter
     - sceneManager
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
@@ -50,6 +55,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.ScrollRect
@@ -91,6 +97,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10470}
     - Class: 114
       Script: {instanceID: 10634}
+    - Class: 114
+      Script: {instanceID: 10848}
+    - Class: 114
+      Script: {instanceID: 11028}
     - Class: 114
       Script: {instanceID: 11088}
     - Class: 114
@@ -259,6 +269,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9698}
     - Class: 114
+      Script: {instanceID: 9742}
+    - Class: 114
       Script: {instanceID: 9860}
     - Class: 114
       Script: {instanceID: 9862}
@@ -268,6 +280,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10002}
     - Class: 114
       Script: {instanceID: 10088}
+    - Class: 114
+      Script: {instanceID: 10196}
     - Class: 114
       Script: {instanceID: 10254}
     - Class: 114
@@ -294,6 +308,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11394}
     - Class: 114
       Script: {instanceID: 11448}
+    - Class: 114
+      Script: {instanceID: 11462}
+    - Class: 114
+      Script: {instanceID: 18046}
+    - Class: 114
+      Script: {instanceID: 52316}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -334,6 +354,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9698}
     - Class: 114
+      Script: {instanceID: 9788}
+    - Class: 114
       Script: {instanceID: 9846}
     - Class: 114
       Script: {instanceID: 9860}
@@ -365,6 +387,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11346}
     - Class: 114
       Script: {instanceID: 11448}
+    - Class: 114
+      Script: {instanceID: 11462}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -420,8 +444,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10654}
     - Class: 114
       Script: {instanceID: 10684}
-    - Class: 114
-      Script: {instanceID: 10702}
     - Class: 114
       Script: {instanceID: 10932}
     - Class: 114
@@ -560,6 +582,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AccountSetupDataSaver
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DataSaver
   - hash:
       serializedVersion: 2
       Hash: d6345af430f4141fad98c8d182869ca9
@@ -982,7 +1010,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: f4e24bcd0b00d10cb6f23da2ee5486e8
+      Hash: 8010a9a258b7ddc0f437dcf7fb9ceaa8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SignUpManager
@@ -1130,6 +1158,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 1b69fd1ee86bac7b1819b76a7afc22ba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InterviewPortalDataLoader
   platform: 2
   scenePathNames:
   - Assets/Scenes/Login.unity
@@ -1139,4 +1173,4 @@ ScriptsOnlyBuild:
   - Assets/Game/Scenes/MiniGame1.unity
   - Assets/Game/Scenes/Connect4.unity
   - Assets/Scenes/Interview Portal.unity
-  playerPath: C:/Users/Nevin/Documents/GitHub/191-Refraction/INF191 Refraction/NevTest.app
+  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demoV6.0.app

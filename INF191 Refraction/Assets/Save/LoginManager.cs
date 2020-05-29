@@ -69,7 +69,19 @@ public class LoginManager : MonoBehaviour
     private void LoginSucceeded()
     {
         Debug.Log("Login Success");
-        if(!Data.userData.accountSetupComplete)
+        
+        //employer logged in
+        if (Data.userData.isEmployer)
+        {
+            //employer account setup
+            if(Data.userData.accountSetupComplete)
+                _sceneManager.LoadInterviewPortal();
+            //interview portal
+            else
+                _sceneManager.LoadAccountSetupStage();
+        }
+        //candidate logged in
+        else if(!Data.userData.accountSetupComplete)
             _sceneManager.LoadAccountSetupStage();
         else if(!Data.userData.quizComplete)
             _sceneManager.LoadQuiz();

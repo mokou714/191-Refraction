@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AccountSetupDataSaver : DataSaver
+public class AccountSetupDataSaver : MonoBehaviour
 {
     [SerializeField] private Clickable maleProfile;
     [SerializeField] private Clickable femaleProfile;
@@ -12,16 +12,21 @@ public class AccountSetupDataSaver : DataSaver
 
     public void LoadNextScene()
     {
-        if(Data.userData == null || !Data.userData.quizComplete)
+        UpdataUserData();
+        
+        if(Data.userData.isEmployer)
+            _sceneManager.LoadInterviewPortal();
+        else if(Data.userData == null || !Data.userData.quizComplete)
             _sceneManager.LoadQuiz();
         else
             _sceneManager.LoadMainGameStage();
 
     }
     
-    protected override void SaveData()
+    private void UpdataUserData()
     {
         if (Data.userData == null) return;
+        Debug.Log("Updated user data");
         Data.userData.profileImageIndex = maleProfile.isSelected ? 0 : 1;
         Data.userData.firstName = firstName.text;
         Data.userData.lastName = lastName.text;
