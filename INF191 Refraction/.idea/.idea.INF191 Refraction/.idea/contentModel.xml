@@ -10,6 +10,7 @@
               <e p="BallSign.cs" t="Include" />
               <e p="BoardManager.cs" t="Include" />
               <e p="Connect4.cs" t="Include" />
+              <e p="ExitGame.cs" t="Include" />
               <e p="Player.cs" t="Include" />
               <e p="QuestionManager.cs" t="Include" />
               <e p="Questions.cs" t="Include" />

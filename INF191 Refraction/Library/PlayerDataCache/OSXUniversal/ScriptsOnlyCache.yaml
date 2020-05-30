@@ -311,7 +311,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 25072}
+      Script: {instanceID: 24986}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1171,4 +1171,4 @@ ScriptsOnlyBuild:
   - Assets/Game/Scenes/MiniGame1.unity
   - Assets/Game/Scenes/Connect4.unity
   - Assets/Scenes/Interview Portal.unity
-  playerPath: /Users/jeimeilreymercado/Downloads/GIt/191-Refraction/INF191 Refraction/JeiTest.app
+  playerPath: /Users/TonyXzh/Desktop/INF191A/Project/INF191 Refraction/demoV6.1.app

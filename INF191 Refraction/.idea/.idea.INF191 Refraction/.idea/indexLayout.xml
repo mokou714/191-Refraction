@@ -15,6 +15,7 @@
     <explicitExcludes>
       <Path>.idea</Path>
       <Path>.vs</Path>
+      <Path>JeiTest.app</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>QuestionData</Path>
@@ -22,8 +23,8 @@
       <Path>Users</Path>
       <Path>demoV4.0</Path>
       <Path>demoV6.0.app</Path>
-      <Path>demo_winV5.3</Path>
-      <Path>demo_winV5.4</Path>
+      <Path>demoV6.1.app</Path>
+      <Path>demo_winV6.0</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
