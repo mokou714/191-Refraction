@@ -20,6 +20,7 @@ public class DataSaver : MonoBehaviour
         Debug.Log("Saving...");
         if (Data.userData == null) return;
         var path = "./Users/" + Data.userData.accountId + "/data.json";
+
         var fileWriter = new StreamWriter(path);
         var json = JsonConvert.SerializeObject(Data.userData);
         Debug.Log(json);
