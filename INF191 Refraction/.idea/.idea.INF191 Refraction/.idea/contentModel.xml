@@ -78,6 +78,7 @@
           </e>
           <e p="PageBubbleSign.cs" t="Include" />
           <e p="Scripts" t="Include">
+            <e p="CandidateList.cs" t="Include" />
             <e p="ComputerUI.cs" t="Include" />
             <e p="QuizManager.cs" t="Include" />
             <e p="RadioBtnField.cs" t="Include" />
@@ -87,9 +88,11 @@
           </e>
           <e p="SkillCard.cs" t="Include" />
           <e p="SkillCardElement.cs" t="Include" />
+          <e p="SkillCardExpanded.cs" t="Include" />
           <e p="SkillCardFrontBack.cs" t="Include" />
           <e p="SkillCardsPage.cs" t="Include" />
           <e p="SkillCardUI.cs" t="Include" />
+          <e p="SkillCatalouge.cs" t="Include" />
           <e p="SubCanvas.cs" t="Include" />
         </e>
       </e>

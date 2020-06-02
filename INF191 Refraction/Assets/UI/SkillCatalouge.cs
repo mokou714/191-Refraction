@@ -25,45 +25,11 @@ public class SkillCatalouge : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        /* initializing some skillcards for test
-        skillCardList = new List<SkillCardEntry>()
-           {
-               new SkillCardEntry{ skillName = "SalesForce", cardID = "001", type = 1, description = "A Programming Language", 
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Handshake", cardID = "002", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Windows", cardID = "003", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Handshake", cardID = "004", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Microsoft Office", cardID = "005", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "PowerPoint", cardID = "006", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Excel", cardID = "007", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Slack", cardID = "008", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "QuickBooks", cardID = "008", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Twitter", cardID = "010", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Tableau", cardID = "011", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Grammarly", cardID = "012", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Dropbox", cardID = "013", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Trello", cardID = "014", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Xero", cardID = "015", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-               new SkillCardEntry{ skillName = "Instragram", cardID = "016", type = 1, description = "A Programming Language",
-                   comment1 = "", comment2 = "", comment3 = ""},
-         };*/
+        /* initializing some skillcards for test*/
+        skillCardList = new List<SkillCardEntry>(16);//*/
 
         var json = new StreamReader("./Users/skills.json");
-        _skillcards = JsonConvert.DeserializeObject<SkillCards>(json.ReadToEnd());
+        skillCardList = JsonConvert.DeserializeObject<List<SkillCardEntry>>(json.ReadToEnd());
 
 
         for (int i = 0; i < skillCardList.Count; i++)

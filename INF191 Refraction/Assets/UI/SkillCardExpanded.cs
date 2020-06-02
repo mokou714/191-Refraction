@@ -24,9 +24,9 @@ public class SkillCardExpanded : MonoBehaviour
         skillNameBack = GetComponent<TextMeshProUGUI>();
         description = GetComponent<TextMeshProUGUI>();
 
-        skillName.text = skillNameOrigin.text;
-        skillNameBack.text = skillNameOrigin.text;
-        description.text = descriptionOrigin.text;
+        // skillName.text = skillNameOrigin.text;
+        // skillNameBack.text = skillNameOrigin.text;
+        // description.text = descriptionOrigin.text;
     }
 
     private void searchCard()
