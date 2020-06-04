@@ -16,5 +16,5 @@
     {"firstName":"Jeimeil","MI":"R","lastName":"Mercado","position":"Applications Architect","isScheduled":true,"date":"06/08/20","time":"2:30PM"},
     {"firstName":"Tony","MI":"","lastName":"Xie","position":"Senior Computer Programmer","isScheduled":true,"date":"06/11/20","time":"2:30PM"},
     {"firstName":"Van","MI":"","lastName":"Trinh","position":"Project Manager","isScheduled":true,"date":"06/10/20","time":"2:30PM"},
-    {"firstName":"Josh","MI":"","lastName":"Smith","position":"Senior ComputerProgrammer","isScheduled":true,"date":"06/04/20","time":"2:30PM"},
+    {"firstName":"Josh","MI":"","lastName":"Smith","position":"Senior Computer Programmer","isScheduled":true,"date":"06/04/20","time":"2:30PM"},
 ]
