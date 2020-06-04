@@ -8,7 +8,10 @@ using UnityScript.Scripting.Pipeline;
 using System;
 using Newtonsoft.Json;
 using System.IO;
+using TMPro;
+#if UNITY_EDITOR
 using UnityEditorInternal.Profiling.Memory.Experimental;
+#endif
 
 public class SkillCatalouge : MonoBehaviour
 {
@@ -18,15 +21,16 @@ public class SkillCatalouge : MonoBehaviour
     private List<Transform> skillCardTransformList;
     private SkillCards _skillcards;
 
+    public GameObject Page;
+    private int pagetype;
+
     private void Awake()
+
     {
         entryContainer = transform.Find("ButtonListContent");
         entryTemplate = entryContainer.Find("SkillCard");
 
         entryTemplate.gameObject.SetActive(false);
-
-        /* initializing some skillcards for test*/
-        skillCardList = new List<SkillCardEntry>(16);//*/
 
         var json = new StreamReader("./Users/skills.json");
         skillCardList = JsonConvert.DeserializeObject<List<SkillCardEntry>>(json.ReadToEnd());
@@ -37,8 +41,8 @@ public class SkillCatalouge : MonoBehaviour
             for (int j = i + 1; j < skillCardList.Count; j++)
             {
                 //if isFirst is -1 then it is First
-                int isFirst = (string.Compare(skillCardList[j].skillName,
-                    skillCardList[i].skillName, System.StringComparison.CurrentCulture));
+                int isFirst = (string.Compare(skillCardList[j].cardID,
+                    skillCardList[i].cardID, System.StringComparison.CurrentCulture));
                 if (isFirst == -1)
                 {
                     SkillCardEntry tmp = skillCardList[i];
@@ -48,7 +52,24 @@ public class SkillCatalouge : MonoBehaviour
             }
         }
 
+        if (Page.name == "Technology Page")
+            pagetype = 1;
+        if (Page.name == "Interpersonal Page")
+            pagetype = 2;
+        if (Page.name == "Specialty Page")
+            pagetype = 3;
+
+
         skillCardTransformList = new List<Transform>();
+        for (int i = 0; i < skillCardList.Count; i++)
+        {
+            if (skillCardList[i].type == pagetype)
+            {
+                CreateListEntryTransform(skillCardList[i], entryContainer, skillCardTransformList);
+            }
+        }
+        
+        /*skillCardTransformList = new List<Transform>();
         foreach (SkillCardEntry SkillCardEntry in skillCardList)
         {
             CreateListEntryTransform(SkillCardEntry, entryContainer, skillCardTransformList);
@@ -58,11 +79,13 @@ public class SkillCatalouge : MonoBehaviour
         var fileWriter = new StreamWriter(path);
 
         SkillCards skillcards = new SkillCards { skillCardList = skillCardList };
-        var json = JsonConvert.SerializeObject(skillCardList);
-        Debug.Log(json);
-        fileWriter.WriteLine(json);
+        var jsonnew = JsonConvert.SerializeObject(skillCardList);
+        Debug.Log(jsonnew);
+        fileWriter.WriteLine(jsonnew);
         fileWriter.Close();*/
-  
+
+
+
     }
 
     private void CreateListEntryTransform(SkillCardEntry skillCardEntry, Transform container, List<Transform> transformList)
@@ -75,8 +98,10 @@ public class SkillCatalouge : MonoBehaviour
 
         string skillName = skillCardEntry.skillName;
         string description = skillCardEntry.description;
+        string cardID = skillCardEntry.cardID;
         entryTransform.Find("Text").GetComponent<Text>().text = skillName;
         entryTransform.Find("Description").GetComponent<Text>().text = description;
+        entryTransform.Find("CardID").GetComponent<Text>().text = cardID;
 
         transformList.Add(entryTransform);
     }

@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using JetBrains.Annotations;
 
 public class SkillCardExpanded : MonoBehaviour
 {
+    public Text skillNameOrig;
+    public Text descOrig;
     
     public TextMeshProUGUI skillName;
     public TextMeshProUGUI skillNameBack;
-    public TextMeshProUGUI description;
+    public TextMeshProUGUI desc;
 
-    private SkillCatalouge _skillList;
+    //private SkillCatalouge _skillList;
 
     void Start()
     {
@@ -20,17 +23,9 @@ public class SkillCardExpanded : MonoBehaviour
     // Start is called before the first frame update
     public void setText()
     {
-        skillName = GetComponent<TextMeshProUGUI>();
-        skillNameBack = GetComponent<TextMeshProUGUI>();
-        description = GetComponent<TextMeshProUGUI>();
-
-        // skillName.text = skillNameOrigin.text;
-        // skillNameBack.text = skillNameOrigin.text;
-        // description.text = descriptionOrigin.text;
+        skillName.text = skillNameOrig.text;
+        skillNameBack.text = skillNameOrig.text;
+        desc.text = descOrig.text;
     }
 
-    private void searchCard()
-    {
-
-    }
 }

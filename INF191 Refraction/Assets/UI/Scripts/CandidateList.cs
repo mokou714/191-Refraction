@@ -17,92 +17,166 @@ public class CandidateList : MonoBehaviour
     private List<CandidateEntry> candidateList;
     private List<Transform> candidateTransformList;
 
+    private string dateTimeString;
+
+    public GameObject Page;
+    private int pagetype;
+
     private void Awake()
     {
+        System.DateTime dateTime = System.DateTime.Now;
+
         entryContainer = transform.Find("ButtonListContent");
         entryTemplate = entryContainer.Find("Button");
 
         entryTemplate.gameObject.SetActive(false);
 
+        var json = new StreamReader("./Users/candidates.json");
+        candidateList = JsonConvert.DeserializeObject<List<CandidateEntry>>(json.ReadToEnd());
 
-        candidateList = new List<CandidateEntry>()
+        if (Page.name == "AtoZPage")
         {
-            new CandidateEntry{ firstName = "Nevin", lastName = "Vo", MI = "Q", position = "Intern",
-                isScheduled = true, date = "5/31/20", time = "3:30PM PST" },
-            new CandidateEntry{ firstName = "Kevin", lastName = "Smith", MI = "Q", position = "Intern",
-                isScheduled = true, date = "5/31/20", time = "3:30PM PST" },
-            new CandidateEntry{ firstName = "Devin", lastName = "Apple", MI = "Q", position = "Intern",
-                isScheduled = false, date = "5/31/20", time = "3:30PM PST" },
-            new CandidateEntry{ firstName = "Sevin", lastName = "Za", MI = "Q", position = "Intern",
-                isScheduled = true, date = "5/31/20", time = "3:30PM PST" },
-        };
-
-        //string jsonString = PlayerPrefs.GetString("canidateList");
-        //Candidates candidates = JsonUtility.FromJson<Candidates>(jsonString);
-
-        for (int i = 0; i < candidateList.Count; i++)
-        {
-            for (int j = i + 1; j < candidateList.Count; j++)
+            for (int i = 0; i < candidateList.Count; i++)
             {
-                //if isFirst is -1 then it is First
-                int isFirst = (string.Compare(candidateList[j].lastName,
-                    candidateList[i].lastName, System.StringComparison.CurrentCulture));
-                if (isFirst == -1)
+                for (int j = i + 1; j < candidateList.Count; j++)
                 {
-                    CandidateEntry tmp = candidateList[i];
-                    candidateList[i] = candidateList[j];
-                    candidateList[j] = tmp;
+                    //if isFirst is -1 then it is First
+                    int isFirst = (string.Compare(candidateList[j].lastName,
+                        candidateList[i].lastName, System.StringComparison.CurrentCulture));
+                    if (isFirst == -1)
+                    {
+                        CandidateEntry tmp = candidateList[i];
+                        candidateList[i] = candidateList[j];
+                        candidateList[j] = tmp;
+                    }
+                }
+            }
+        }
+        if (Page.name == "TypeIntPage")
+        {
+            for (int i = 0; i < candidateList.Count; i++)
+            {
+                for (int j = i + 1; j < candidateList.Count; j++)
+                {
+                    //if isFirst is -1 then it is First
+                    int isFirst = (string.Compare(candidateList[j].position,
+                        candidateList[i].position, System.StringComparison.CurrentCulture));
+                    if (isFirst == -1)
+                    {
+                        CandidateEntry tmp = candidateList[i];
+                        candidateList[i] = candidateList[j];
+                        candidateList[j] = tmp;
+                    }
+                }
+            }
+        }
+        if ((Page.name == "ThisWeekIntPage") || (Page.name == "FutureIntPage") || (Page.name == "PastIntPage"))
+        {
+            for (int i = 0; i < candidateList.Count; i++)
+            {
+                for (int j = i + 1; j < candidateList.Count; j++)
+                {
+                    //if isFirst is -1 then it is First
+                    int isFirst = (string.Compare(candidateList[j].date,
+                        candidateList[i].date, System.StringComparison.CurrentCulture));
+                    if (isFirst == -1)
+                    {
+                        CandidateEntry tmp = candidateList[i];
+                        candidateList[i] = candidateList[j];
+                        candidateList[j] = tmp;
+                    }
+                    else if (isFirst == 0)
+                    {
+                        int isFirstTime = (string.Compare(candidateList[j].time,
+                            candidateList[i].time, System.StringComparison.CurrentCulture));
+                        if (isFirstTime == -1)
+                        {
+                            CandidateEntry tmp = candidateList[i];
+                            candidateList[i] = candidateList[j];
+                            candidateList[j] = tmp;
+                        }
+                    }
                 }
             }
         }
 
 
-        candidateTransformList = new List<Transform>();
-        foreach (CandidateEntry candidateEntry in candidateList)
+
+
+
+                candidateTransformList = new List<Transform>();
+
+        if ((Page.name == "ThisWeekIntPage") || (Page.name == "FutureIntPage") || (Page.name == "PastIntPage"))
         {
-            CreateListEntryTransform(candidateEntry, entryContainer, candidateTransformList);
+            dateTime = System.DateTime.Now;
+            dateTimeString = dateTime.ToString("MM/dd/yy");
+
+            DateTime nextWeek = dateTime.AddDays(7);
+            string nextWeekString = nextWeek.ToString("MM/dd/yy");
+
+            if (Page.name == "ThisWeekIntPage")
+            {
+                for (int i = 0; i < candidateList.Count; i++)
+                {
+                    // if interview is scheduled for this week
+                    if (candidateList[i].isScheduled == true)
+                    {
+                        if (
+                            ((string.Compare(dateTimeString,
+                            candidateList[i].date, System.StringComparison.CurrentCulture)) <= 0)
+                            &&
+                            ((string.Compare(candidateList[i].date, nextWeekString, System.StringComparison.CurrentCulture)) == -1)
+                            )
+                        {
+                            CreateListEntryTransform(candidateList[i], entryContainer, candidateTransformList);
+                        }
+                    }
+                }
+            }
+
+            if (Page.name == "FutureIntPage")
+            {
+                for (int i = 0; i < candidateList.Count; i++)
+                {
+                    // if interview is scheduled for any time after next week
+                    if (candidateList[i].isScheduled == true)
+                    {
+                        if (
+                            ((string.Compare(candidateList[i].date, nextWeekString, System.StringComparison.CurrentCulture)) >= 0)
+                           )
+                        {
+                            CreateListEntryTransform(candidateList[i], entryContainer, candidateTransformList);
+                        }
+                    }
+                }
+            }
+
+
+            if (Page.name == "PastIntPage")
+            {
+                for (int i = 0; i < candidateList.Count; i++)
+                {
+                    // if interview was scheduled in the past before this date
+                    if (candidateList[i].isScheduled == true)
+                    {
+                        if (
+                            ((string.Compare(candidateList[i].date, dateTimeString, System.StringComparison.CurrentCulture)) < 0)
+                           )
+                        {
+                            CreateListEntryTransform(candidateList[i], entryContainer, candidateTransformList);
+                        }
+                    }
+                }
+            }
         }
-
-        Candidates candidates = new Candidates { candidateList = candidateList };
-        string jsonString = JsonUtility.ToJson(candidates);
-
-        Debug.Log("Saving...");
-        if (Data.userData == null) return;
-        var path = "./Users/" + Data.userData.accountId + "/candidates.json";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        var fileWriter = new StreamWriter(path);
-        var json = JsonConvert.SerializeObject(candidates);
-        Debug.Log(json);
-        fileWriter.WriteLine(json);
-        fileWriter.Close();
-
-        /*PlayerPrefs.SetString("candidateList", json);
-        PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetString("candidateList"));
-        */
-
-
-
-        /*float templateHeight = 110f;
-        for (int i = 0; i < 10; i++)
+        else
         {
-            Transform entryTransform = Instantiate(entryTemplate, entryContainer);
-            RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-            entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * i);
-            entryTransform.gameObject.SetActive(true);
-
-            entryTransform.Find("IntervieweeName").GetComponent<TextMeshProUGUI>().text = "Interviewee Name <#999999>| Position";
-            entryTransform.Find("InterviewDate").GetComponent<TextMeshProUGUI>().text = "NOT PLANNED";
+            foreach (CandidateEntry candidateEntry in candidateList)
+            {
+                CreateListEntryTransform(candidateEntry, entryContainer, candidateTransformList);
+            }
         }
-        */
     }
-
-    protected void OnApplicationQuit()
-    {
-
-    }
-    
 
     private void CreateListEntryTransform(CandidateEntry candidateEntry, Transform container, List<Transform> transformList)
     {
@@ -117,8 +191,12 @@ public class CandidateList : MonoBehaviour
         string lastName = candidateEntry.lastName;
         string position = candidateEntry.position;
 
-        entryTransform.Find("IntervieweeName").GetComponent<TextMeshProUGUI>().text = firstName + " " + MI + 
-            " " + lastName + " <#999999>| " + position;
+        if (MI != "")
+            entryTransform.Find("IntervieweeName").GetComponent<TextMeshProUGUI>().text = firstName + " " + MI +
+                ". " + lastName + " <#999999>| " + position;
+        else
+            entryTransform.Find("IntervieweeName").GetComponent<TextMeshProUGUI>().text = firstName +
+                " " + lastName + " <#999999>| " + position;
 
         string date = candidateEntry.date;
         string time = candidateEntry.time;
